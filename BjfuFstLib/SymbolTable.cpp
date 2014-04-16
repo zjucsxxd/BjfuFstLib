@@ -26,6 +26,7 @@ namespace bjfufst{
 			pos = this->Size();
 		}
 		insertPair(_next_available_label, symbol);
+		_next_available_label++;
 		return pos;
 	}
 

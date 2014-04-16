@@ -69,6 +69,24 @@ namespace bjfufst{
 		return true;
 	}
 
+	bool fst::WriteText(const char* filename, const SymbolTable & isymbs, const SymbolTable & osymbs)
+	{
+		std::ofstream ofile(filename);
+
+		StateId src_state_id = 0;
+		for (auto & state_it : states)
+		{
+			for (auto & arc_it : state_it.arcs)
+			{
+				ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
+			}
+			src_state_id++;
+		}
+		ofile << finalId << '\t' << 0 << std::endl;
+		return true;
+
+	}
+
 	bool fst::ReadText(const char* filename)
 	{
 
@@ -78,20 +96,25 @@ namespace bjfufst{
 		/////////////////////////
 		
 		std::ifstream ifile(filename);
-		Symbol line;
-		std::vector<Symbol> parts;
+		std::string line;
+		std::vector<std::string> parts;
 		bool bStoreSymbolWithFst = true;
 		int nLineCounter=0;
 // 		SymbolTable
+
+
+		while (!ifile.eof())
+		{
+			getline(ifile, line);
+		}
+
+
+
 
 		getline(ifile, line);
 		nLineCounter++;
 		split(line, parts, " \t");
 
-// 		if (isNum(parts[3]) && isNum(parts[4])) //if pure digit
-// 		{
-// 			bStoreSymbolWithFst = false;
-// 		}
 
 		while (!ifile.eof())
 		{
@@ -104,14 +127,7 @@ namespace bjfufst{
 
 			if (parts.size()==5)	//if arc
 			{
-				if (bStoreSymbolWithFst)
-				{
-
-				}
-				else
-				{
-
-				}
+				
 			}
 			else if (parts.size()==2)	//if state
 			{
@@ -122,6 +138,15 @@ namespace bjfufst{
 				std::cout << "Parsing error at " << filename << ':' << nLineCounter << std::endl;
 			}
 		}
+	}
+
+	bool fst::ReadText(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs)
+	{
+
+		////UNDER COSNTRUCTION////
+		std::cout << "fst::ReadText not yet supported." << std::endl;
+		return 0;
+		///////////////////////////
 	}
 
 	void fst::Minimize()
@@ -142,6 +167,29 @@ namespace bjfufst{
 	bool fst::RemoveArc(StateId s, size_t n)
 	{
 		return states[s].RemoveArc(n);
+	}
+
+	bool fst::Draw(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs)
+	{
+		std::ofstream ofile(filename);
+		ofile << "digraph G{\n";
+		ofile << "edge [fontname=\"Î¢ÈíÑÅºÚ\"];\n";
+
+
+
+		StateId src_state_id = 0;
+		for (auto & state_it : states)
+		{
+			for (auto & arc_it : state_it.arcs)
+			{
+// 				ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
+				ofile << src_state_id << " -> " << arc_it.nextstate << " [label=\"" << isymbs.Find(arc_it.ilabel) << ':' << osymbs.Find(arc_it.olabel) << ',' << arc_it.weight << "\"];\n";
+			}
+			src_state_id++;
+		}
+		ofile << '}'<<std::endl;
+		return true;
+
 	}
 
 }

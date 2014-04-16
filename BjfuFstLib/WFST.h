@@ -33,8 +33,11 @@ public:
 	//执行Determinize操作。
 	void Determinize();
 
+	//draw fst in dot format.
+	void Draw(const char * filename);
+
 	//name of fst.
-	Symbol fstname;
+	std::string fstname;
 
 // 	//清除此WFST
 // 	void Clear();
@@ -77,6 +80,11 @@ void WFST::Minimize()
 void WFST::Determinize()
 {
 	_fst.Determinize();
+}
+
+void WFST::Draw(const char * filename)
+{
+	_fst.Draw(filename, _isymbol, _osymbol);
 }
 
 

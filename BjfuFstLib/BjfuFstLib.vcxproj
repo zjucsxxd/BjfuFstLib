@@ -22,6 +22,7 @@
   <ItemGroup>
     <ClCompile Include="arc.cpp" />
     <ClCompile Include="fst.cpp" />
+    <ClCompile Include="FstConventions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="state.cpp" />
     <ClCompile Include="SymbolTable.cpp" />

@@ -3,6 +3,7 @@
 #include "arc.h"
 #include <vector>
 #include "FstConventions.h"
+#include "SymbolTable.h"
 
 namespace bjfufst{
 
@@ -43,9 +44,13 @@ namespace bjfufst{
 
 		//write fst to text
 		bool WriteText(const char* filename);
+		//write fst to text, appending symbols.
+		bool WriteText(const char* filename,const SymbolTable & isymbs, const SymbolTable & osymbs);
 
-		//read fst from text.Automatically generate isymbs and osymbs if necesssary.
+		//read fst from text.
 		bool ReadText(const char* filename);
+		//read fst from text, modifying i/o symbs.
+		bool ReadText(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs);
 
 		//Minimizing operation
 		void Minimize();
@@ -55,6 +60,12 @@ namespace bjfufst{
 
 		//number of states
 		size_t NumStates() const;
+
+		//draw the fst in .dot format.
+		bool Draw(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs);
+
+
+
 	public:
 
 

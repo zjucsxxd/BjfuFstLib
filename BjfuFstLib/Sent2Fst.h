@@ -106,8 +106,9 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 	for (int i = 0; i < wordFst_state_number;i++)
 	{
 		int nArc = 0;
-		for (auto & arc:wfst.states[i].arcs)
+		for (int j = 0; j < wfst.states[i].arcs.size();j++)
 		{
+			auto & arc = wfst.states[i].arcs[j];
 			Label ilbl = arc.ilabel;
 			Symbol oWord = wordFST->_osymbol.Find(ilbl);
 			if (oWord=="<eps>" || oWord=="eps")
@@ -119,7 +120,7 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 			if (oWord!="")//if arc not replaced yet 
 			{
 				//TODO:remove old arc 
-				wfst.RemoveArc(i,nArc);
+// 				wfst.RemoveArc(i,nArc);
 				//do the replacement.
 				Arc2LexFst(oWord, i, lexDict[oWord], arc.nextstate, phoneFST);
 			}
