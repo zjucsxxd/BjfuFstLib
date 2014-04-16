@@ -18,7 +18,7 @@ namespace bjfufst{
 	{
 	}
 
-	Label SymbolTable::AddSymbol(const char* symbol)
+	Label SymbolTable::AddSymbol(const Symbol & symbol)
 	{
 		Label pos = Find(symbol);
 		if (pos == -1)
@@ -44,9 +44,14 @@ namespace bjfufst{
 		return this->_map_lbl_sym.size();
 	}
 
-	Label SymbolTable::Find(const char* symbol) const
+	Label SymbolTable::Find(const Symbol & symbol) const
 	{
-		return _map_sym_lbl[symbol];
+		auto it = _map_sym_lbl.find(symbol);
+		if (it==_map_sym_lbl.end())
+		{
+			return -1;
+		}
+		return it->second;
 	}
 
 	bool SymbolTable::WriteText(const char * filename)
@@ -72,9 +77,14 @@ namespace bjfufst{
 
 	}
 
-	Symbol SymbolTable::Find(const Label &label)
+	Symbol SymbolTable::Find(const Label &label) const
 	{
-		return _map_lbl_sym[label];
+		auto it = _map_lbl_sym.find(label);
+		if (it == _map_lbl_sym.end())
+		{
+			return "";
+		}
+		return it->second;
 	}
 
 	void SymbolTable::Clear()

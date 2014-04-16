@@ -1,5 +1,6 @@
-#pragma warning( disable : 4996) 
 #pragma once
+#pragma warning( disable : 4996) 
+
 #include <string>
 #include <vector>
 namespace bjfufst{
@@ -42,7 +43,6 @@ void split(std::string line, std::vector<std::string> &parts, std::string patter
 }
 
 //integer checker
-#include <string>
 bool isNum(std::string str)
 {
 	return (atoi(str.c_str()) == 0 && !(str.size() == 1 && str[0] == '0'));

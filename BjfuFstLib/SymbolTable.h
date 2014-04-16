@@ -15,16 +15,16 @@ namespace bjfufst{
 		size_t Size();
 
 		//add a symbol and return the new label.or return existing label if exists.
-		Label AddSymbol(const char * symbol);
-		Label AddSymbol(const Symbol & symbol){ return AddSymbol(symbol.c_str()); };
+// 		Label AddSymbol(const char * symbol);
+		Label AddSymbol(const Symbol & symbol);	// { return AddSymbol(symbol.c_str()); };
 		Label AddSymbol(const Symbol & symbol, const Label label);
 
 		//find label from symbol. return -1 if not found.
-		Label Find(const char* symbol) const;
-		Label Find(const Symbol & symbol)const { return Find(symbol); } ;
+		Label Find(const Symbol & symbol) const;
+// 		Label Find(const Symbol & symbol)const { return Find(symbol); } ;
 
 		//find symbol from label. return empty string if not found.
-		Symbol Find(const Label &label);
+		Symbol Find(const Label &label) const;
 
 		//write symbol table to text
 		bool WriteText(const char * filename);
