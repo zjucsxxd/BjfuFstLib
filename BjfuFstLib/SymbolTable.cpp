@@ -6,6 +6,7 @@ namespace bjfufst{
 
 	SymbolTable::SymbolTable()
 	{
+		this->insertPair(0, "<eps>");	//insert <eps> at 0 pos as default..
 	}
 
 	SymbolTable::SymbolTable(const char * filename)

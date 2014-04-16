@@ -77,6 +77,10 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst)
 bool Sent2Fst::LoadLexDic(const char * filename)
 {
 	std::ifstream lexFile(filename);
+	if (!lexFile)
+	{
+		std::cout << "Warning! Cannot find " << filename << std::endl;
+	}
 	Symbol line;
 	std::vector<Symbol> parts;
 	Symbol word;
@@ -100,7 +104,7 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 	//need to clear phoneFst first
 
 	phoneFST->_fst = wordFST->_fst;	//copy from wordFst
-//	phoneFST->_osymbol = wordFST->_osymbol;
+	phoneFST->_osymbol = wordFST->_osymbol;
 	auto & wfst = phoneFST->_fst;
 	int wordFst_state_number = wordFST->_fst.NumStates();	//save number of old states. 区分新老状态。
 	for (int i = 0; i < wordFst_state_number;i++)
