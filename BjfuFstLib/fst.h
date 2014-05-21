@@ -7,6 +7,8 @@
 
 namespace bjfufst{
 
+
+
 	class fst
 	{
 	public:
@@ -58,11 +60,21 @@ namespace bjfufst{
 		//Determinizing operation
 		void Determinize();
 
+		//Removing epsilon arcs and corresponding states.
+		void Rmepsilon();
+
+		//Triphone expanding operation.
+		void Triphone();
+
 		//number of states
 		size_t NumStates() const;
 
+
 		//draw the fst in .dot format.
-		bool Draw(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs);
+		bool Draw(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs, const bool print_symbols = true);
+
+		//get an arc from position
+		Arc& findArc(const Arc_Pos & pos);
 
 
 

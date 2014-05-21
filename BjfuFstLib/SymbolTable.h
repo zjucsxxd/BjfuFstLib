@@ -21,7 +21,7 @@ namespace bjfufst{
 		//find label from symbol. return -1 if not found.
 		Label Find(const Symbol & symbol) const;
 
-		//find symbol from label. return empty string if not found.
+		//find symbol from label. return "" if not found.
 		Symbol Find(const Label &label) const;
 
 		//write symbol table to text

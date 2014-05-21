@@ -6,7 +6,9 @@ namespace bjfufst{
 
 	SymbolTable::SymbolTable()
 	{
-		this->insertPair(0, "<eps>");	//insert <eps> at 0 pos as default..
+		//insert <eps> at 0 pos as default..
+		AddSymbol("<eps>", 0);
+
 	}
 
 	SymbolTable::SymbolTable(const char * filename)
@@ -24,10 +26,10 @@ namespace bjfufst{
 		Label pos = Find(symbol);
 		if (pos == -1)
 		{
-			pos = this->Size();
+			pos = _next_available_label;
+			insertPair(_next_available_label, symbol);
+			_next_available_label++;
 		}
-		insertPair(_next_available_label, symbol);
-		_next_available_label++;
 		return pos;
 	}
 

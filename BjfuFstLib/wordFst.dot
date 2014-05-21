@@ -1,14 +1,10 @@
 digraph G{
 edge [fontname="Î¢ÈíÑÅºÚ"];
-0 -> 1 [label="A:A,0.8"];
-0 -> 2 [label="B:B,0.5"];
-0 -> 3 [label="C:C,0.5"];
-1 -> 0 [label="<eps>:<eps>,0.2"];
-1 -> 1 [label="<eps>:<eps>,0.2"];
-1 -> 2 [label="B:B,0.8"];
-2 -> 0 [label="<eps>:<eps>,0.2"];
-2 -> 2 [label="<eps>:<eps>,0.2"];
-2 -> 3 [label="C:C,0.8"];
-3 -> 0 [label="<eps>:<eps>,0.2"];
-3 -> 3 [label="<eps>:<eps>,0.2"];
+0 -> 1 [label="1.A:1.A,0.8"];
+0 -> 2 [label="2.B:2.B,0.5"];
+1 -> 0 [label="0.<eps>:0.<eps>,0.2"];
+1 -> 1 [label="0.<eps>:0.<eps>,0.2"];
+1 -> 2 [label="2.B:2.B,0.8"];
+2 -> 0 [label="0.<eps>:0.<eps>,0.2"];
+2 -> 2 [label="0.<eps>:0.<eps>,0.2"];
 }

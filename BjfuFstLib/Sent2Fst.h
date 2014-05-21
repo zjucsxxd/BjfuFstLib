@@ -34,7 +34,7 @@ public:
 private:
 	//replace an arc from iState to oState with lexs
 	void Arc2LexFst(Symbol oWord, int iState, vvstr lexs, int oState, WFST * wfst);
-
+	void Arc2LexFst(int iState, int idArc,Symbol oWord ,vvstr lexs, WFST * wfst);
 };
 
 
@@ -77,6 +77,7 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst)
 bool Sent2Fst::LoadLexDic(const char * filename)
 {
 	std::ifstream lexFile(filename);
+	
 	if (!lexFile)
 	{
 		std::cout << "Warning! Cannot find " << filename << std::endl;
@@ -107,10 +108,10 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 	phoneFST->_osymbol = wordFST->_osymbol;
 	auto & wfst = phoneFST->_fst;
 	int wordFst_state_number = wordFST->_fst.NumStates();	//save number of old states. 区分新老状态。
-	for (int i = 0; i < wordFst_state_number;i++)
+	for (int i = 0; i < wordFst_state_number; i++)//iterate over all states
 	{
-		int nArc = 0;
-		for (int j = 0; j < wfst.states[i].arcs.size();j++)
+		int nArc = wfst.states[i].arcs.size();
+		for (int j = 0; j < nArc; j++)//iterate over all arcs of the state
 		{
 			auto & arc = wfst.states[i].arcs[j];
 			Label ilbl = arc.ilabel;
@@ -121,220 +122,259 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 				continue;
 //				arc.nextstate = wfst.AddArc();
 			}
-			if (oWord!="")//if arc not replaced yet 
+			if (oWord != "")//if arc not replaced yet 
 			{
 				//TODO:remove old arc 
-// 				wfst.RemoveArc(i,nArc);
 				//do the replacement.
-				Arc2LexFst(oWord, i, lexDict[oWord], arc.nextstate, phoneFST);
+				Arc2LexFst(i, j, oWord, lexDict[oWord], phoneFST);
+				wfst.RemoveArc(i, j);
+				j--;
+				nArc--;
+//				Arc2LexFst(oWord, i, lexDict[oWord], arc.nextstate, phoneFST);
+// 				wfst.RemoveArc(i, nArc);
+// 				wordFst_state_number--;
+// 				j--;
+			} 
+			else
+			{
+				nArc++;
 			}
-			nArc++;
 		}
 	}
 
-
-
-	/*
-	static int counter = 0;
-	counter++;
-	if (fst.state_e != fst.state_s)
-	{
-		FST tmpfst = fst;
-		if (fst.arcs.size() == 1)
-		{
-			arcs[arc_id].input = fst.arcs[0].input;
-			arcs[arc_id].output = fst.arcs[0].output;
-		}
-		else
-		{
-			int state_size = states.size(); //记下替换前的FST的大小作为偏差量
-			int arc_size = arcs.size();
-			int state_i = arcs[arc_id].state_i; //保存下被替换弧的前后两个节点的ID state_i和state_o
-			int state_o = arcs[arc_id].state_o;
-			float W = arcs[arc_id].weight;
-
-			for (int i = 0; i < tmpfst.arcs.size(); i++)
-			{
-				if (tmpfst.arcs[i].state_i == tmpfst.state_s) tmpfst.arcs[i].state_i = -2; //用-2,-3来暂代头尾节点的ＩＤ，以防被修改
-				else tmpfst.arcs[i].state_i += state_size; //将arc指向后面新增的弧
-				if (tmpfst.arcs[i].state_o == tmpfst.state_e) tmpfst.arcs[i].state_o = -3;
-				else tmpfst.arcs[i].state_o += state_size;
-			}
-
-			tmpfst.states.erase(tmpfst.states.begin() + tmpfst.state_e);
-			tmpfst.states.erase(tmpfst.states.begin() + tmpfst.state_s); //清除源FST中的state_s和state_e，
-
-
-
-			for (int i = 0; i < tmpfst.arcs.size(); i++)
-			{
-				if (tmpfst.arcs[i].state_o >= tmpfst.state_e + state_size)  tmpfst.arcs[i].state_o--;
-				if (tmpfst.arcs[i].state_i >= tmpfst.state_e + state_size)  tmpfst.arcs[i].state_i--; //纠正上一步造成的偏差
-			}
-			for (int i = 0; i < tmpfst.arcs.size(); i++)
-			{
-				if (tmpfst.arcs[i].state_o >= tmpfst.state_s + state_size)  tmpfst.arcs[i].state_o--;
-				if (tmpfst.arcs[i].state_i >= tmpfst.state_s + state_size)  tmpfst.arcs[i].state_i--; //纠正上一步造成的偏差
-			}
-
-			for (int i = 0; i < tmpfst.arcs.size(); i++)
-			{
-				if (tmpfst.arcs[i].state_i == -2)
-				{
-					tmpfst.arcs[i].state_i = state_i;
-					if (i > 0) states[state_i].arc_o.push_back(i + arc_size - 1);
-				}
-				if (tmpfst.arcs[i].state_o == -3)
-				{
-					tmpfst.arcs[i].state_o = state_o;    //恢复头尾节点ID
-					tmpfst.arcs[i].weight = W;
-				}
-			}
-
-			arcs[arc_id] = tmpfst.arcs[0]; //先把源fst的第一个弧替换掉arcs[arc_id]
-			for (int i = 1; i < tmpfst.arcs.size(); i++)
-			{
-				arcs.push_back(tmpfst.arcs[i]);//添加处理好的弧
-			}
-			for (int i = 0; i < tmpfst.states.size(); i++)
-			{
-				for (int j = 0; j < tmpfst.states[i].arc_o.size(); j++)
-				{
-					if (tmpfst.states[i].arc_o[j] >= 0) tmpfst.states[i].arc_o[j] += (arc_size - 1); //修改节点的arc_out
-				}
-
-				states.push_back(tmpfst.states[i]);//添加处理好的状态
-			}
-
-
-			//          //tmpfst.arcs[0].state_i=state_i;//先用源FST的第一条弧替换被替换弧
-			//          //tmpfst.arcs[0].state_o+=state_size;
-			//          //tmpfst.arcs[state_e].state_o=;
-			//          arcs[arc_id]=tmpfst.arcs[0];
-			//          for (int i=0;i<tmpfst.arcs.size();i++)//遍历修改源fst中的节点和弧 并且将其加入到this fst的最后
-			//          {
-			//              tmpfst.arcs[i].state_i+=state_size;
-			//              if (tmpfst.arcs[i].state_i==tmpfst.state_s)
-			//              {
-			//                  tmpfst.arcs[i].state_i=state_i;
-			//              }
-			//              if (tmpfst.arcs[i].state_o==tmpfst.state_e)//如果此弧指向源FST的末尾，则让其直接指向state_o
-			//              {
-			//                  tmpfst.arcs[i].state_o=state_o;
-			//              }
-			//              else    tmpfst.arcs[i].state_o+=state_size;
-			//
-			//              arcs.push_back(tmpfst.arcs[i]);
-			//          }
-			//
-			//          for(int i=1;i<tmpfst.states[0].arc_o.size();i++)//将源FST的头结点的其余出弧连接上
-			//          {
-			//              states[state_i].arc_o.push_back(tmpfst.states[0].arc_o[i]+arc_size);
-			//          }
-			//
-			//          for (int i=0;i<tmpfst.states.size();i++)//合并
-			//          {
-			//              for (int j=0;j<tmpfst.states[i].arc_o.size();j++)
-			//              {
-			//                  tmpfst.states[i].arc_o[j]+=arc_size;
-			//              }
-			//              states.push_back(states[i]);
-			//          }
-		}
-		if (counter % 100 == 0) cout << counter << ":Phones of word" << fst.arcs[fst.arcs.size() - 1].output << "added." << endl;
-	}
-	else
-	{
-		cout << counter << ":OOPS, this is N-Gram" << endl;
-	}
-	*/
 return 0;
 }
 
 bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 {
-		auto &fst_Triphone=triphoneFST->_fst;
-		auto &con_symbs = triphoneFST->_isymbol;
-		auto &lex_symbs = triphoneFST->_osymbol;
-		auto &c_state_symbs = triphoneFST->_ssymbol;
-		phone_list.erase("sil");
+	//TODO:LR-Biphone triphone constructor.
+	triphoneFST->_fst = phoneFST->_fst;
+	triphoneFST->_ssymbol = phoneFST->_ssymbol;
+	triphoneFST->_isymbol = phoneFST->_isymbol;
+	triphoneFST->_osymbol = phoneFST->_osymbol;
+	//copying original fst
 
-		//step0:generate eps-sil part.
-		con_symbs.AddSymbol("<eps>");
-		con_symbs.AddSymbol("sil");
-		// 	con_symbs.AddSymbol("<s>");
-		// 	con_symbs.AddSymbol("</s>");
-		c_state_symbs.Clear();
-		fst_Triphone.AddState();
-		c_state_symbs.AddSymbol("eps");//add the eps state, as the begin state.
-		fst_Triphone.SetStart(0);
-		fst_Triphone.AddState();
-		c_state_symbs.AddSymbol("sil");//add the silence state, as end state.
-		fst_Triphone.SetFinal(1);
-		fst_Triphone.AddArc(0, Arc(con_symbs.Find("sil"), lex_symbs.Find("sil"), 0, 1));
+	auto &fst_Triphone = triphoneFST->_fst;
+	auto &con_symbs = triphoneFST->_isymbol;
+	auto &lex_symbs = triphoneFST->_osymbol;
+	auto &c_state_symbs = triphoneFST->_ssymbol;
+	
 
-		Symbol triphone;	//the triphone on the arc
-		Symbol prev_state_label, next_state_label;	//labels on the states
-		int prev_state_id, next_state_id;	//id of the states
-
-
-		//step1:add states(a,sil) & arcs sil->(a,sil) sil-a+sil:a & arcs (a,sil)->sil sil:sil
-		for (auto phone : phone_list) //C++11 Range-based for. 
+	//step1:L-Biphone expanding. No labeling yet.
+	auto arcs_in = triphoneFST->updateArcIn();
+	for (int i = 0; i < fst_Triphone.NumStates(); i++)//iterating over all states, expanding all corresponding arcs and states.
+	{
+		auto &arcin = arcs_in[i];
+		if (arcin.empty())
 		{
-			next_state_id = fst_Triphone.AddState();//add the new state a,sil
-			next_state_label = phone + ",sil";
-			c_state_symbs.AddSymbol(next_state_label, next_state_id);//and its label. For quick locating.
-			triphone = "sil-" + phone + "+sil";
-			fst_Triphone.AddArc(1, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone), 0, next_state_id));	//add the new arc sil:x
-			fst_Triphone.AddArc(next_state_id, Arc(con_symbs.Find("sil"), lex_symbs.Find("sil"), 0, 1));	//and the backoff arc.
+			std::cout << "warning: state " << i << " has no arcin." << std::endl;
+			continue;
 		}
 
-		//step2:add states(a,b) & arcs sil->(a,b) sil-a+b:a  & arcs (a,b)->(b,sil) a-b+sil:b
-		for (auto & phone_a : phone_list)	//C++11 range-based for. With auto ref type.
+		if (arcin.size()>1)//try expanding if more than one arcin exists.
 		{
-			for (auto & phone_b : phone_list)
+			std::map<Symbol, std::vector<Arc_Pos> > prev_string2id;//建立<字符串,弧ID数组>的映射，对应多组入弧
+			for (int j = 0; j < arcin.size(); j++)
 			{
-				next_state_label = phone_a + ',' + phone_b;	//make next state "a,b"
-				next_state_id = fst_Triphone.AddState();
-				c_state_symbs.AddSymbol(next_state_label, next_state_id);
-
-				// 			if (next_state_id == kNoLabel)
-				// 			{
-				// 				next_state_id = fst_Triphone.AddState();
-				// 				c_state_symbs.AddSymbol(next_state_label, next_state_id);
-				// 			}
-				triphone = "sil-" + phone_a + '+' + phone_b;//generate triphone
-				fst_Triphone.AddArc(1, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone_a), 0, next_state_id)); //add arc sil-a+b:a
-
-				fst_Triphone.AddArc(next_state_id, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone_b), 0, c_state_symbs.Find(phone_b + ",sil")));
+				Symbol thisarcinput = con_symbs.Find(fst_Triphone.findArc(arcin[j]).ilabel);
+				prev_string2id[thisarcinput].push_back(arcin[j]);
 			}
-		}
-
-		//step3: add inter-state arcs (a,b)->(b,c) a-b+c:b
-		for (auto & phone_a : phone_list)
-		{
-			for (auto & phone_b : phone_list)
+			if (prev_string2id.size()>1)//expand of differs.
 			{
-				prev_state_label = phone_a + ',' + phone_b;
-				prev_state_id = c_state_symbs.Find(prev_state_label);
-				for (auto & phone_c : phone_list)
+				auto it = prev_string2id.begin(); //初始化map的迭代器it
+				it++;//跳过第一组入弧，让它们和原来的状态连着就好
+				for (; it != prev_string2id.end(); it++) //依次处理各组弧
 				{
-					next_state_label = phone_b + ',' + phone_c;
-					next_state_id = c_state_symbs.Find(next_state_label);
-					triphone = phone_a + '-' + phone_b + '+' + phone_c;
+					auto &prev_ids = it->second; //引用出一组同输入的Arc_Pos元素列表
+					int newstate_id = fst_Triphone.AddState();//分裂出新状态并且记下其ID
+					arcs_in[newstate_id] = prev_ids;//顺便在arcs_in列表中加入此新状态的入弧
 
-					fst_Triphone.AddArc(prev_state_id, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone_b), 0, next_state_id));
+
+					for (int k = 0; k < prev_ids.size(); k++) //链接本组同输入的弧和新状态
+					{
+						auto & in_arc = fst_Triphone.findArc(prev_ids[k]);
+						in_arc.nextstate = newstate_id;
+// 						fst_Triphone.AddArc(prev_ids[k].s,Arc(in_arc.ilabel,in_arc.olabel,in_arc.weight,newstate_id) );
+					}
+					//linking new state with following states.
+					fst_Triphone.states[newstate_id].arcs = fst_Triphone.states[i].arcs;
 				}
 			}
 		}
-		return true;
+	}
+	//step2:R-Biphone expanding.
+	arcs_in = triphoneFST->updateArcIn();
+	for (int i = 0; i < fst_Triphone.NumStates(); i++)//iterating over all states, expanding all corresponding arcs and states.
+	{
+		auto &it_state = fst_Triphone.states[i];
+		auto &arcout =it_state.arcs;
+		if (arcout.empty())
+		{
+			std::cout << "warning: state " << i << " has no arcout." << std::endl;
+			continue;
+		}
+
+		if (arcout.size()>1)//try expanding if more than one arcin exists.
+		{
+			std::map<Symbol, std::vector<Arc> > next_string2id;//建立<字符串,弧ID数组>的映射，对应多组入弧
+			for (int j = 0; j < arcout.size(); j++)
+			{
+				Symbol thisarcinput = con_symbs.Find(arcout[j].ilabel);
+				next_string2id[thisarcinput].push_back(arcout[j]);
+			}
+			if (next_string2id.size()>1)//expand of differs.
+			{
+				auto it = next_string2id.begin(); //初始化map的迭代器it
+
+
+				it_state.arcs = it->second;
+				it++;//跳过第一组出弧，让它们和原来的状态连着就好
+
+				for (; it != next_string2id.end(); it++) //依次处理各组弧
+				{
+					auto &next_ids = it->second; //引用出一组同输入的Arc_Pos元素列表
+					int newstate_id = fst_Triphone.AddState();//分裂出新状态并且记下其ID
+// 					arcs_in[newstate_id] = next_ids;//顺便在arcs_in列表中加入此新状态的入弧
+					fst_Triphone.states[newstate_id].arcs = next_ids;
+					arcs_in = triphoneFST->updateArcIn();//TODO:可以优化掉？
+					auto & in_arcs = arcs_in[i];
+					for (int k = 0; k < in_arcs.size(); k++) //链接本组同输入的弧和新状态
+					{
+						auto & in_arc_pos = in_arcs[k];
+						auto in_arc = fst_Triphone.findArc(in_arc_pos);
+						fst_Triphone.AddArc(in_arc_pos.s,Arc(in_arc.ilabel,in_arc.olabel,in_arc.weight,newstate_id) );
+					}
+				}
+			}
+		}
+	}
+
+	//step 3: iterate over arcs and generate triphone.
+	arcs_in = triphoneFST->updateArcIn();
+	std::map<Arc_Pos, Label,Arc_Pos_Compare> monoiLabel;
+	for (StateId s = 0; s < fst_Triphone.states.size(); s++)
+	{
+		State & it_state = fst_Triphone.states[s];
+		for (size_t a = 0; a < it_state.arcs.size(); a++)
+		{
+			Arc &it_arc = it_state.arcs[a];
+			monoiLabel[Arc_Pos(s, a)] = it_arc.ilabel;
+		}
+	}//keeping old monophone iLabel
+
+	Label lbl_prev, lbl_curr, lbl_next;
+
+	for (StateId s = 0; s < fst_Triphone.states.size(); s++)
+	{
+		State & it_state = fst_Triphone.states[s];
+		for (size_t a = 0; a < it_state.arcs.size(); a++)
+		{
+			Arc &it_arc = it_state.arcs[a];
+			lbl_prev = monoiLabel[arcs_in[s][0]];
+			lbl_curr = monoiLabel[Arc_Pos(s,a)];
+			lbl_next = monoiLabel[Arc_Pos(it_arc.nextstate,0)];
+			Symbol triphone_symbol = triphoneFST->_isymbol.Find(lbl_prev) + '-' + triphoneFST->_isymbol.Find(lbl_curr) + '+' + triphoneFST->_isymbol.Find(lbl_next);
+			it_arc.ilabel = triphoneFST->_isymbol.AddSymbol(triphone_symbol);
+		}
+	}
+
+
+
+
+	return 0;
+
 }
 
+	/*
+	bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
+
+	////dict-based triphone constructor
+	auto &fst_Triphone=triphoneFST->_fst;
+	auto &con_symbs = triphoneFST->_isymbol;
+	auto &lex_symbs = triphoneFST->_osymbol;
+	auto &c_state_symbs = triphoneFST->_ssymbol;
+	phone_list.erase("sil");
+
+	//step0:generate eps-sil part.
+	con_symbs.AddSymbol("<eps>");
+	con_symbs.AddSymbol("sil");
+	// 	con_symbs.AddSymbol("<s>");
+	// 	con_symbs.AddSymbol("</s>");
+	c_state_symbs.Clear();
+	fst_Triphone.AddState();
+	c_state_symbs.AddSymbol("eps");//add the eps state, as the begin state.
+	fst_Triphone.SetStart(0);
+	fst_Triphone.AddState();
+	c_state_symbs.AddSymbol("sil");//add the silence state, as end state.
+	fst_Triphone.SetFinal(1);
+	fst_Triphone.AddArc(0, Arc(con_symbs.Find("sil"), lex_symbs.Find("sil"), 0, 1));
+
+	Symbol triphone;	//the triphone on the arc
+	Symbol prev_state_label, next_state_label;	//labels on the states
+	int prev_state_id, next_state_id;	//id of the states
+
+
+	//step1:add states(a,sil) & arcs sil->(a,sil) sil-a+sil:a & arcs (a,sil)->sil sil:sil
+	for (auto phone : phone_list) //C++11 Range-based for.
+	{
+	next_state_id = fst_Triphone.AddState();//add the new state a,sil
+	next_state_label = phone + ",sil";
+	c_state_symbs.AddSymbol(next_state_label, next_state_id);//and its label. For quick locating.
+	triphone = "sil-" + phone + "+sil";
+	fst_Triphone.AddArc(1, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone), 0, next_state_id));	//add the new arc sil:x
+	fst_Triphone.AddArc(next_state_id, Arc(con_symbs.Find("sil"), lex_symbs.Find("sil"), 0, 1));	//and the backoff arc.
+	}
+
+	//step2:add states(a,b) & arcs sil->(a,b) sil-a+b:a  & arcs (a,b)->(b,sil) a-b+sil:b
+	for (auto & phone_a : phone_list)	//C++11 range-based for. With auto ref type.
+	{
+	for (auto & phone_b : phone_list)
+	{
+	next_state_label = phone_a + ',' + phone_b;	//make next state "a,b"
+	next_state_id = fst_Triphone.AddState();
+	c_state_symbs.AddSymbol(next_state_label, next_state_id);
+
+	// 			if (next_state_id == kNoLabel)
+	// 			{
+	// 				next_state_id = fst_Triphone.AddState();
+	// 				c_state_symbs.AddSymbol(next_state_label, next_state_id);
+	// 			}
+	triphone = "sil-" + phone_a + '+' + phone_b;//generate triphone
+	fst_Triphone.AddArc(1, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone_a), 0, next_state_id)); //add arc sil-a+b:a
+
+	fst_Triphone.AddArc(next_state_id, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone_b), 0, c_state_symbs.Find(phone_b + ",sil")));
+	}
+	}
+
+	//step3: add inter-state arcs (a,b)->(b,c) a-b+c:b
+	for (auto & phone_a : phone_list)
+	{
+	for (auto & phone_b : phone_list)
+	{
+	prev_state_label = phone_a + ',' + phone_b;
+	prev_state_id = c_state_symbs.Find(prev_state_label);
+	for (auto & phone_c : phone_list)
+	{
+	next_state_label = phone_b + ',' + phone_c;
+	next_state_id = c_state_symbs.Find(next_state_label);
+	triphone = phone_a + '-' + phone_b + '+' + phone_c;
+
+	fst_Triphone.AddArc(prev_state_id, Arc(con_symbs.AddSymbol(triphone), lex_symbs.Find(phone_b), 0, next_state_id));
+	}
+	}
+	}
+	return true;
+}
+	*/
 
 void Sent2Fst::Arc2LexFst(Symbol oWord,int iState, vvstr lexs, int oState,WFST * wfst)
 {
 	//locate arc first
 	fst &thefst = wfst->_fst;
+#ifdef _DEBUG
+	wfst->Draw("debug.dot");
+#endif // _DEBUG
+
 	for (auto lex:lexs)
 	{
 		int prev_state_id = iState;
@@ -347,8 +387,50 @@ void Sent2Fst::Arc2LexFst(Symbol oWord,int iState, vvstr lexs, int oState,WFST *
 			//and arc to the new state ->
 			thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol("<eps>"), 0, new_state_id));
 			prev_state_id = new_state_id;
+#ifdef _DEBUG
+			wfst->Draw("debug.dot");
+#endif // _DEBUG
+
 		}
 		//finally add the arc with output to the oState.
 		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), 0, oState));
+#ifdef _DEBUG
+		wfst->Draw("debug.dot");
+#endif // _DEBUG
+
 	}
+}
+
+void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST * wfst)
+{
+	//locate arc first
+	fst &thefst = wfst->_fst;
+	Arc thearc = thefst.states[iState].arcs[idArc];
+	StateId oState = thearc.nextstate;
+
+	for (auto lex : lexs)//support multi-tone
+	{
+		int prev_state_id = iState;
+		int new_state_id;
+		auto it_Phone = lex.begin();
+		for (; it_Phone != lex.end() - 1; it_Phone++)
+		{
+			//insert state o
+			new_state_id = thefst.AddState();
+			//and arc to the new state ->o
+			thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol("<eps>"), 0, new_state_id));
+			prev_state_id = new_state_id;
+#ifdef _DEBUG
+			wfst->Draw("debug.dot");
+#endif // _DEBUG
+
+		}
+		//finally add the arc with output to the oState. o->o->o
+		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), 0, oState));
+#ifdef _DEBUG
+		wfst->Draw("debug.dot");
+#endif // _DEBUG
+
+	}
+
 }

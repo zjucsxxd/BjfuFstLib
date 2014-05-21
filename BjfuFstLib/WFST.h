@@ -39,18 +39,35 @@ public:
 	//name of fst.
 	std::string fstname;
 
-// 	//Çå³ý´ËWFST
-// 	void Clear();
+	//tool func, returning a list of inarcs of all states.
+	std::map<StateId, std::vector<Arc_Pos> > WFST::updateArcIn();
 
-	WFST(const Symbol fstname)
+
+	WFST(const std::string fstname)
+		:fstname(fstname)
 	{
+
 	}
+
+	//copy constructor
+	WFST(const WFST& wfst)
+		:_fst(wfst._fst), _isymbol(wfst._isymbol), _osymbol(wfst._osymbol), _ssymbol(wfst._ssymbol)
+	{
+
+	}
+
 
 	~WFST()
 	{
 	}
 
+	void Triphone()
+	{
+		this->_fst.Triphone();
+// 		throw std::logic_error("The method or operation is not implemented.");
+	}
 
+	
 
 	//internal openFst implement
 	fst _fst;
@@ -87,6 +104,18 @@ void WFST::Draw(const char * filename)
 	_fst.Draw(filename, _isymbol, _osymbol);
 }
 
+std::map<StateId,std::vector<Arc_Pos> > WFST::updateArcIn()
+{
+	std::map<StateId, std::vector<Arc_Pos> > retval;
 
-
-
+	for (int i = 0; i < _fst.states.size(); i++)
+	{
+		auto& ref_state = _fst.states[i];
+		for (int j = 0; j < ref_state.arcs.size();j++)
+		{
+			auto& ref_arc = ref_state.arcs[j];
+			retval[ref_arc.nextstate].push_back(Arc_Pos(i, j));
+		}
+	}
+	return retval;
+}

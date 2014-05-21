@@ -169,7 +169,7 @@ namespace bjfufst{
 		return states[s].RemoveArc(n);
 	}
 
-	bool fst::Draw(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs)
+	bool fst::Draw(const char* filename, SymbolTable & isymbs, SymbolTable & osymbs, const bool print_symbols /*= true*/)
 	{
 		std::ofstream ofile(filename);
 		ofile << "digraph G{\n";
@@ -183,13 +183,35 @@ namespace bjfufst{
 			for (auto & arc_it : state_it.arcs)
 			{
 // 				ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
-				ofile << src_state_id << " -> " << arc_it.nextstate << " [label=\"" << isymbs.Find(arc_it.ilabel) << ':' << osymbs.Find(arc_it.olabel) << ',' << arc_it.weight << "\"];\n";
+				if (print_symbols)
+				{
+					ofile << src_state_id << " -> " << arc_it.nextstate << " [label=\"" << arc_it.ilabel << '.' << isymbs.Find(arc_it.ilabel) << ':' << arc_it.ilabel << '.'<< osymbs.Find(arc_it.olabel) << ',' << arc_it.weight << "\"];\n";
+				}
+				else
+				{
+					ofile << src_state_id << " -> " << arc_it.nextstate << " [label=\"" << arc_it.ilabel << ':' << arc_it.olabel << ',' << arc_it.weight << "\"];\n";
+				}
 			}
 			src_state_id++;
 		}
 		ofile << '}'<<std::endl;
 		return true;
 
+	}
+
+	void fst::Rmepsilon()
+	{
+		//TODO : fill the operation
+	}
+
+	void fst::Triphone()
+	{
+
+	}
+
+	Arc& fst::findArc(const Arc_Pos & pos)
+	{
+		return states[pos.s].arcs[pos.a];
 	}
 
 }
