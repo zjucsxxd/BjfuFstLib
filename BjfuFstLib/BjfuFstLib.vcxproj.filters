@@ -65,5 +65,8 @@
     <ClCompile Include="Sent2Fst.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="WFST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

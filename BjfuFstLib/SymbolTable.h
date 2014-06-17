@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _SYMBOL_TABLE_H
+#define _SYMBOL_TABLE_H
+
 #include <vector>
 #include <map>
 #include <algorithm>
@@ -49,3 +51,4 @@ namespace bjfufst{
 		Label findNextAvailableLabel();
 	};
 }
+#endif 

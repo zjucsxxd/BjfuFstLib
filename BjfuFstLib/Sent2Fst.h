@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _SENT2FST_H
+#define _SENT2FST_H
 #include "WFST.h"
 
 class Sent2Fst
@@ -38,8 +39,4 @@ private:
 	void Arc2LexFst(int iState, int idArc,Symbol oWord ,vvstr lexs, WFST * wfst);
 };
 
-
-
-
-
-
+#endif

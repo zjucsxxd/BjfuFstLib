@@ -29,6 +29,7 @@
     <ClCompile Include="Sent2Fst.cpp" />
     <ClCompile Include="state.cpp" />
     <ClCompile Include="SymbolTable.cpp" />
+    <ClCompile Include="WFST.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{35761A76-2A4A-4806-96CC-99D7B71FB424}</ProjectGuid>

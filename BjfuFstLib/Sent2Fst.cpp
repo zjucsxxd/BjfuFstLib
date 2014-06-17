@@ -1,8 +1,5 @@
 #include "Sent2Fst.h"
 
-
-
-
 bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options/*=""*/)
 {
 	vstr parts;	//a vector<string> that saves all separated words in a sentence.
@@ -17,7 +14,7 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 	wordFst.SetStart(prev_state_id);	//add and set the first state.
 	bool bIsFirst = true;	//flag indicating first word. First w
 
-	bool LinearFst = strcmp(options, "linear");//check if use simple fst network,without eps.
+	bool bLinearFst = !strcmp(options, "linear");//check if use simple fst network,without eps.
 
 
 
@@ -25,7 +22,12 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 	{
 		next_state_id = wordFst.AddState();	//create next state
 		wordFst.AddArc(prev_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), 0.8, next_state_id));	//and next arc.
+		if (bLinearFst)//create no eps arcs if bLinearFst is given.
+		{
+			prev_state_id = next_state_id;
 
+			continue;
+		}
 		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), 0.2, eps_state_id));	//and backoff arc to eps state.
 		if (bIsFirst)
 			bIsFirst = false;
@@ -302,8 +304,16 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 	}
 
 
+	triphoneFST->Draw("triphone_notiedlist.dot");
+
+
 	//tied-list processing.
 	std::ifstream ifTiedList("tiedlist");
+	if (!ifTiedList)
+	{
+		std::cout << "Can't open file tiedlist!" << std::endl;
+		exit(0);
+	}
 	std::map < std::string, std::string > mapTiedList;
 	std::string line;
 	std::vector < std::string >  parts;
@@ -314,7 +324,7 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 		{
 			continue;
 		}
-		mapTiedList[parts[1]] = parts[2];
+		mapTiedList[parts[0]] = parts[1];
 	}
 
 	for (StateId s = 0; s < fst_Triphone.states.size(); s++)
@@ -336,39 +346,6 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 	return 0;
 }
 
-void Sent2Fst::Arc2LexFst(Symbol oWord, int iState, vvstr lexs, int oState, WFST * wfst)
-{
-	//locate arc first
-	fst &thefst = wfst->_fst;
-#ifdef _DEBUG
-	wfst->Draw("debug.dot");
-#endif // _DEBUG
-
-	for (auto lex : lexs)
-	{
-		int prev_state_id = iState;
-		int new_state_id;
-		auto it_Phone = lex.begin();
-		for (; it_Phone != lex.end() - 1; it_Phone++)
-		{
-			//insert state .
-			new_state_id = thefst.AddState();
-			//and arc to the new state ->
-			thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol("<eps>"), 0, new_state_id));
-			prev_state_id = new_state_id;
-#ifdef _DEBUG
-			wfst->Draw("debug.dot");
-#endif // _DEBUG
-
-		}
-		//finally add the arc with output to the oState.
-		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), 0, oState));
-#ifdef _DEBUG
-		wfst->Draw("debug.dot");
-#endif // _DEBUG
-
-	}
-}
 
 void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST * wfst)
 {
@@ -395,7 +372,7 @@ void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST 
 
 		}
 		//finally add the arc with output to the oState. o->o->o
-		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), 0, oState));
+		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), thearc.weight, oState));
 #ifdef _DEBUG
 		wfst->Draw("debug.dot");
 #endif // _DEBUG
@@ -403,6 +380,39 @@ void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST 
 	}
 }
 
+// void Sent2Fst::Arc2LexFst(Symbol oWord, int iState, vvstr lexs, int oState, WFST * wfst)
+// {
+// 	//locate arc first
+// 	fst &thefst = wfst->_fst;
+// #ifdef _DEBUG
+// 	wfst->Draw("debug.dot");
+// #endif // _DEBUG
+// 
+// 	for (auto lex : lexs)
+// 	{
+// 		int prev_state_id = iState;
+// 		int new_state_id;
+// 		auto it_Phone = lex.begin();
+// 		for (; it_Phone != lex.end() - 1; it_Phone++)
+// 		{
+// 			//insert state .
+// 			new_state_id = thefst.AddState();
+// 			//and arc to the new state ->
+// 			thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol("<eps>"), 0, new_state_id));
+// 			prev_state_id = new_state_id;
+// #ifdef _DEBUG
+// 			wfst->Draw("debug.dot");
+// #endif // _DEBUG
+// 
+// 		}
+// 		//finally add the arc with output to the oState.
+// 		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), 0, oState));
+// #ifdef _DEBUG
+// 		wfst->Draw("debug.dot");
+// #endif // _DEBUG
+// 
+// 	}
+// }
 
 
 /*
