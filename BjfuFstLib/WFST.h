@@ -7,6 +7,7 @@
 #include <fstream>
 #include "fst.h"
 #include "SymbolTable.h"
+#include "FastLM.h"
 using namespace bjfufst;
 
 void split(Symbol line, std::vector<Symbol> &parts, Symbol pattern);
@@ -35,6 +36,59 @@ public:
 
 	//draw fst in dot format.
 	void Draw(const char * filename);
+
+	//WFST to CFastLM Converter
+	void SaveCFastLM(const char * filename)
+	{
+		CFastLM fastlm;
+		fastlm.fastNodeNum = _fst.NumStates();
+		fastlm.fastEdgeNum = 0;
+		for (int s = 0; s < _fst.states.size(); s++)
+		{
+			fastlm.fastEdgeNum += _fst.states[s].arcs.size();
+		}
+		fastlm.pEdgeArray = new CFastEdge[fastlm.fastEdgeNum];
+
+		int edge_pos = 0;
+		for (int s = 0; s < _fst.states.size(); s++)
+		{
+			State & it_state = _fst.states[s];
+			fastlm.fastEdgeNum += it_state.arcs.size();
+			fastlm.pNodeArray[s].edgeStart = edge_pos;
+			fastlm.pNodeArray[s].edgeCount = it_state.arcs.size();
+			fastlm.pNodeArray[s].best = 0;
+			for (int a = 0; a < it_state.arcs.size(); a++)
+			{
+				Arc & it_arc = it_state.arcs[a];
+				fastlm.pEdgeArray[edge_pos].idata = it_arc.ilabel;
+				fastlm.pEdgeArray[edge_pos].odata = it_arc.olabel;
+				fastlm.pEdgeArray[edge_pos].nodeTo = it_arc.nextstate;
+				fastlm.pEdgeArray[edge_pos].weight = it_arc.weight;
+				if (it_arc.weight>fastlm.pNodeArray[s].best)
+				{
+					fastlm.pNodeArray[s].best = it_arc.weight;
+				}
+				edge_pos++;
+			}
+		}
+
+		fastlm.pPhons = new char *[this->_isymbol.Size()];//potential bug due to noncontinuous label.
+		for (int i = 0; i < this->_isymbol.Size();i++)
+		{
+			strcpy(fastlm.pPhons[i], this->_isymbol.Find(i).c_str());
+		}
+
+		fastlm.pWords = new char *[this->_osymbol.Size()];//potential bug due to noncontinuous label.
+		for (int i = 0; i < this->_osymbol.Size(); i++)
+		{
+			strcpy(fastlm.pWords[i], this->_osymbol.Find(i).c_str());
+		}
+
+		fastlm.fastStNode = fastlm.fastEdNode = 0;//temporarily define start&end node at ZERO.
+
+		fastlm.SaveFastLM(filename);
+	}
+
 
 	//name of fst.
 	std::string fstname;

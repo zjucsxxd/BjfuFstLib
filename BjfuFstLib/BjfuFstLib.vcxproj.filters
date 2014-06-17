@@ -36,6 +36,9 @@
     <ClInclude Include="FstConventions.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="FastLM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="arc.cpp">
@@ -54,6 +57,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="FstConventions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FastLM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sent2Fst.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

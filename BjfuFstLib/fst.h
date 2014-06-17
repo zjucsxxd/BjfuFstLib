@@ -76,6 +76,7 @@ namespace bjfufst{
 		//get an arc from position
 		Arc& findArc(const Arc_Pos & pos);
 
+		
 
 
 	public:

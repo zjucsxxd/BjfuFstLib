@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arc.h" />
+    <ClInclude Include="FastLM.h" />
     <ClInclude Include="fst.h" />
     <ClInclude Include="FstConventions.h" />
     <ClInclude Include="Sent2Fst.h" />
@@ -21,9 +22,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="arc.cpp" />
+    <ClCompile Include="FastLM.cpp" />
     <ClCompile Include="fst.cpp" />
     <ClCompile Include="FstConventions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sent2Fst.cpp" />
     <ClCompile Include="state.cpp" />
     <ClCompile Include="SymbolTable.cpp" />
   </ItemGroup>
