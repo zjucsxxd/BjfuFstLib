@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+const float g_ForwardArcWeight = 0.0;
+const float g_BackoffArcWeight = 0.0;
 
 namespace bjfufst{
 
@@ -18,3 +20,4 @@ void split(std::string line, std::vector<std::string> &parts, std::string patter
 
 //integer checker
 bool isNum(std::string str);
+

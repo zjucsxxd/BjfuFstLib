@@ -82,6 +82,9 @@ void WFST::SaveCFastLM(const char * filename)
 
 	fastlm.fastStNode = fastlm.fastEdNode = 0;//temporarily define start&end node at ZERO.
 
+	fastlm.fastStNode = this->_fst.startId;
+	fastlm.fastEdNode = this->_fst.finalId;
+
 	fastlm.SaveFastLM(filename);
 }
 

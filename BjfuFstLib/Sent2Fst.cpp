@@ -21,23 +21,24 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 	for (auto it : parts)
 	{
 		next_state_id = wordFst.AddState();	//create next state
-		wordFst.AddArc(prev_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), 0.8, next_state_id));	//and next arc.
+		wordFst.AddArc(prev_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id));	//and next arc.
 		if (bLinearFst)//create no eps arcs if bLinearFst is given.
 		{
 			prev_state_id = next_state_id;
 
 			continue;
 		}
-		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), 0.2, eps_state_id));	//and backoff arc to eps state.
+		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, eps_state_id));	//and backoff arc to eps state.
 		if (bIsFirst)
 			bIsFirst = false;
 		else
-			wordFst.AddArc(eps_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), 0.5, next_state_id));	//and forwarding arc from eps state.
+			wordFst.AddArc(eps_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id));	//and forwarding arc from eps state.
 
-		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), 0.2, next_state_id));	//and self-ring arc.
+		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, next_state_id));	//and self-ring arc.
 
 		prev_state_id = next_state_id;
 	}
+	wordFst.SetFinal(next_state_id);
 
 	return false;
 }
