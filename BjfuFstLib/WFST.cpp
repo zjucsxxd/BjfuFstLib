@@ -85,6 +85,18 @@ void WFST::SaveCFastLM(const char * filename)
 	fastlm.fastStNode = this->_fst.startId;
 	fastlm.fastEdNode = this->_fst.finalId;
 
+	for (int i = 0; i < fastlm.nPhons;i++)
+	{
+		delete pPhons[i];
+	}
+	delete pPhons;
+
+	for (int i = 0; i < fastlm.nWords; i++)
+	{
+		delete pWords[i];
+	}
+	delete pWords;
+
 	fastlm.SaveFastLM(filename);
 }
 

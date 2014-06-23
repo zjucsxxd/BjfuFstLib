@@ -93,6 +93,11 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 			{
 				//TODO:remove old arc 
 				//do the replacement.
+				auto dict_it = lexDict.find(oWord);
+				if (dict_it==lexDict.end())
+				{
+					std::cout << "ERROR: No lex found for " << oWord << std::endl;
+				}
 				Arc2LexFst(i, j, oWord, lexDict[oWord], phoneFST);
 				wfst.RemoveArc(i, j);
 				j--;
