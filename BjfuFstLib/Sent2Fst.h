@@ -8,6 +8,8 @@ public:
 
 	 // 读取发音词典
 	bool LoadLexDic(const char * filename);
+	
+	bool LoadTiedList(const char * filename);
 
 	// sent已经分词好了，词和词之间用空格隔开；WFST类的格式由你来定义。
 	bool Sent2WordFST(const char * sent, WFST * wfst, const char * options=""); 
@@ -31,6 +33,9 @@ public:
 	}
 
 	LexDict lexDict;
+	std::map < std::string, std::string > mapTiedList;
+
+
 	std::set<Symbol> phone_list;
 
 private:

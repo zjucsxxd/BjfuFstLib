@@ -7,7 +7,7 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 	auto& wordFst = wfst->_fst;
 	auto& iSymbol = wfst->_isymbol;
 	auto& oSymbol = wfst->_osymbol;
-	bjfufst::StateId prev_state_id = wordFst.AddState(), next_state_id;
+	bjfufst::StateId prev_state_id = wordFst.AddState(), next_state_id=0;
 	auto eps_state_id = prev_state_id;
 	auto eps_label = iSymbol.AddSymbol("<eps>");
 	oSymbol.AddSymbol("<eps>");
@@ -21,20 +21,25 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 	for (auto it : parts)
 	{
 		next_state_id = wordFst.AddState();	//create next state
-		wordFst.AddArc(prev_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id));	//and next arc.
+		Arc temp(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id);
+		wordFst.AddArc(prev_state_id, temp);	//and next arc.
 		if (bLinearFst)//create no eps arcs if bLinearFst is given.
 		{
 			prev_state_id = next_state_id;
 
 			continue;
 		}
-		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, eps_state_id));	//and backoff arc to eps state.
+		Arc temp1(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, eps_state_id);
+		wordFst.AddArc(next_state_id,temp1);	//and backoff arc to eps state.
 		if (bIsFirst)
 			bIsFirst = false;
-		else
-			wordFst.AddArc(eps_state_id, Arc(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id));	//and forwarding arc from eps state.
+		else{
+			Arc temp2(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id);
+			wordFst.AddArc(eps_state_id, temp2);	//and forwarding arc from eps state.
+			}
 
-		wordFst.AddArc(next_state_id, Arc(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, next_state_id));	//and self-ring arc.
+		Arc temp3(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, next_state_id);
+		wordFst.AddArc(next_state_id, temp3);	//and self-ring arc.
 
 		prev_state_id = next_state_id;
 	}
@@ -93,11 +98,6 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 			{
 				//TODO:remove old arc 
 				//do the replacement.
-				auto dict_it = lexDict.find(oWord);
-				if (dict_it==lexDict.end())
-				{
-					std::cout << "ERROR: No lex found for " << oWord << std::endl;
-				}
 				Arc2LexFst(i, j, oWord, lexDict[oWord], phoneFST);
 				wfst.RemoveArc(i, j);
 				j--;
@@ -216,7 +216,8 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 					{
 						auto & in_arc_pos = in_arcs[k];
 						auto in_arc = fst_Triphone.findArc(in_arc_pos);
-						fst_Triphone.AddArc(in_arc_pos.s, Arc(in_arc.ilabel, in_arc.olabel, in_arc.weight, newstate_id));
+						Arc temp4(in_arc.ilabel, in_arc.olabel, in_arc.weight, newstate_id);
+						fst_Triphone.AddArc(in_arc_pos.s, temp4);
 					}
 				}
 			}
@@ -246,6 +247,9 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 			Arc &it_arc = it_state.arcs[a];
 			lbl_curr = monoiLabel[Arc_Pos(s, a)];
 			if (lbl_curr == 0) //no triphone for eps arc.
+			{
+				//TODO: rewrite eps operation.
+			}
 				continue;
 
 			if (arcs_in[s].size() > 0)//find prev lbl
@@ -309,29 +313,12 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 		}
 	}
 
-
+#ifdef DEBUG
 	triphoneFST->Draw("triphone_notiedlist.dot");
+#endif // DEBUG
 
 
-	//tied-list processing.
-	std::ifstream ifTiedList("tiedlist");
-	if (!ifTiedList)
-	{
-		std::cout << "Can't open file tiedlist!" << std::endl;
-		exit(0);
-	}
-	std::map < std::string, std::string > mapTiedList;
-	std::string line;
-	std::vector < std::string >  parts;
-	while (getline(ifTiedList,line))
-	{
-		split(line, parts, " ");
-		if (parts.size() != 2)
-		{
-			continue;
-		}
-		mapTiedList[parts[0]] = parts[1];
-	}
+
 
 	for (StateId s = 0; s < fst_Triphone.states.size(); s++)
 	{
@@ -370,7 +357,8 @@ void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST 
 			//insert state o
 			new_state_id = thefst.AddState();
 			//and arc to the new state ->o
-			thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol("<eps>"), 0, new_state_id));
+			Arc temp5(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol("<eps>"), 0, new_state_id);
+			thefst.AddArc(prev_state_id, temp5);
 			prev_state_id = new_state_id;
 #ifdef _DEBUG
 			wfst->Draw("debug.dot");
@@ -378,11 +366,34 @@ void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST 
 
 		}
 		//finally add the arc with output to the oState. o->o->o
-		thefst.AddArc(prev_state_id, Arc(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), thearc.weight, oState));
+		Arc temp6(wfst->_isymbol.AddSymbol(*it_Phone), wfst->_osymbol.AddSymbol(oWord), thearc.weight, oState);
+		thefst.AddArc(prev_state_id, temp6);
 #ifdef _DEBUG
 		wfst->Draw("debug.dot");
 #endif // _DEBUG
 
+	}
+}
+
+bool Sent2Fst::LoadTiedList(const char * filename)
+{
+	//tied-list processing.
+	std::ifstream ifTiedList("tiedlist");
+	if (!ifTiedList)
+	{
+		std::cout << "Can't open file tiedlist!" << std::endl;
+		exit(0);
+	}
+	std::string line;
+	std::vector < std::string >  parts;
+	while (getline(ifTiedList, line))
+	{
+		split(line, parts, " ");
+		if (parts.size() != 2)
+		{
+			continue;
+		}
+		mapTiedList[parts[0]] = parts[1];
 	}
 }
 

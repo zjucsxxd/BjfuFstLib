@@ -1,13 +1,10 @@
 #include "WFST.h"
 #include "Sent2Fst.h"
 #include <string.h>
-#include "CompactSet.h"
-
-using namespace bjfufst;
 
 char *intoa(int value, char *string ,int radix){
 	if (radix!=10){
-		printf("radix wrong in intoa!\n");
+		printf("radix wroing in intoa!\n");
 		return NULL;
 	}
 	int a,b,c,d;
@@ -35,7 +32,6 @@ char *intoa(int value, char *string ,int radix){
 
 int main(const int argc, const char ** argv)
 {
-
 	double start, end;
 	freopen("stdout.txt", "w", stdout);
 	start = clock();
@@ -47,7 +43,7 @@ int main(const int argc, const char ** argv)
 	WFST *phoneFst;
 	WFST *triphoneFst;//FST网络类
 	sent2fst.LoadLexDic("dict");//载入lex词典
-	sent2fst.LoadTiedList("tiedlist");
+
 	//std::string sent(argv[0]);//被转换的句子字符串默认为参数0
 	//sent = "<s> which buses should i take if i want to get to nangao </s>";//TEST PURPOSE ONLY.手动指定一个源句子，记得包含句首句尾标签。
 	char sent[250];
@@ -64,18 +60,11 @@ int main(const int argc, const char ** argv)
 		strcat(wordfst_name, c);
 		std::cout << wordfst_name << std::endl;
 		wordFst = new WFST(wordfst_name);
-		phoneFst = new WFST(std::string("phone")+wordfst_name);
-		triphoneFst = new WFST(std::string("triphone") + wordfst_name);
 
 		sent2fst.Sent2WordFST(sent, wordFst, "linear");
-		sent2fst.WordFST2PhoneFST(wordFst, phoneFst);
+ 		wordFst->SaveFST(wordfst_name);
+// 		wordFst.Draw("wordFst.dot");//画成dot图形文件，可以用graphviz或者xdot打开查看。
 		delete wordFst;
-		sent2fst.PhoneFST2TriphoneFST(phoneFst, triphoneFst);
-		delete phoneFst;
-// 		wordFst->SaveFST(wordfst_name);
-// 		wordFst->Draw("wordFst.dot");//画成dot图形文件，可以用graphviz或者xdot打开查看。
-		triphoneFst->SaveCFastLM(wordfst_name);
-		delete triphoneFst;
 		a++;
 		if (a > 999)
 			break;

@@ -2,12 +2,13 @@
 #define _WFST_H
 
 
-#include <map>
+#include <hash_map>
 #include <vector>
 #include <string>
 #include <set>
 #include <iostream>
 #include <fstream>
+#include <time.h>
 #include "fst.h"
 #include "SymbolTable.h"
 #include "FastLM.h"
@@ -19,7 +20,7 @@ typedef std::vector<Symbol> vstr;
 typedef std::vector<std::vector<Symbol> > vvstr;
 
 
-typedef std::map<Symbol, vvstr > LexDict;
+typedef std::hash_map<Symbol, vvstr > LexDict;
 
 
 class WFST
@@ -48,7 +49,7 @@ public:
 	std::string fstname;
 
 	//tool func, returning a list of inarcs of all states.
-	std::map<StateId, std::vector<Arc_Pos> > WFST::updateArcIn();
+	std::map<StateId, std::vector<Arc_Pos> > updateArcIn();
 
 
 	WFST(const std::string fstname)

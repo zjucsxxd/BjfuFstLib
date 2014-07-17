@@ -2,6 +2,7 @@
 #include "state.h"
 #include "arc.h"
 #include <vector>
+#include <set>
 #include "FstConventions.h"
 #include "SymbolTable.h"
 
@@ -76,7 +77,8 @@ namespace bjfufst{
 		//get an arc from position
 		Arc& findArc(const Arc_Pos & pos);
 
-		
+		//epsilon closure of state.
+		std::set<State> eps_closure(State state);
 
 
 	public:
