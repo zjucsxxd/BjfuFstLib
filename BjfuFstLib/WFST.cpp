@@ -135,10 +135,10 @@ std::map<StateId, std::vector<Arc_Pos> > WFST::updateArcIn()
 
 	for (int i = 0; i < _fst.states.size(); i++)
 	{
-		auto& ref_state = _fst.states[i];
+		State& ref_state = _fst.states[i];
 		for (int j = 0; j < ref_state.arcs.size(); j++)
 		{
-			auto& ref_arc = ref_state.arcs[j];
+			Arc& ref_arc = ref_state.arcs[j];
 			retval[ref_arc.nextstate].push_back(Arc_Pos(i, j));
 		}
 	}

@@ -4,12 +4,12 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 {
 	vstr parts;	//a vector<string> that saves all separated words in a sentence.
 	split(sent, parts, " ");
-	auto& wordFst = wfst->_fst;
-	auto& iSymbol = wfst->_isymbol;
-	auto& oSymbol = wfst->_osymbol;
+	fst& wordFst = wfst->_fst;
+	SymbolTable& iSymbol = wfst->_isymbol;
+	SymbolTable& oSymbol = wfst->_osymbol;
 	bjfufst::StateId prev_state_id = wordFst.AddState(), next_state_id=0;
-	auto eps_state_id = prev_state_id;
-	auto eps_label = iSymbol.AddSymbol("<eps>");
+	StateId eps_state_id = prev_state_id;
+	StateId eps_label = iSymbol.AddSymbol("<eps>");
 	oSymbol.AddSymbol("<eps>");
 	wordFst.SetStart(prev_state_id);	//add and set the first state.
 	bool bIsFirst = true;	//flag indicating first word. First w
@@ -18,8 +18,9 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 
 
 
-	for (auto it : parts)
+	for (int i = 0; i < parts.size();i++)//(auto it : parts)
 	{
+		std::string it = parts[i];
 		next_state_id = wordFst.AddState();	//create next state
 		Arc temp(iSymbol.AddSymbol(it), oSymbol.AddSymbol(it), g_ForwardArcWeight, next_state_id);
 		wordFst.AddArc(prev_state_id, temp);	//and next arc.
@@ -78,14 +79,14 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 
 	phoneFST->_fst = wordFST->_fst;	//copy from wordFst
 	phoneFST->_osymbol = wordFST->_osymbol;
-	auto & wfst = phoneFST->_fst;
+	fst & wfst = phoneFST->_fst;
 	int wordFst_state_number = wordFST->_fst.NumStates();	//save number of old states. 区分新老状态。
 	for (int i = 0; i < wordFst_state_number; i++)//iterate over all states
 	{
 		int nArc = wfst.states[i].arcs.size();
 		for (int j = 0; j < nArc; j++)//iterate over all arcs of the state
 		{
-			auto & arc = wfst.states[i].arcs[j];
+			Arc & arc = wfst.states[i].arcs[j];
 			Label ilbl = arc.ilabel;
 			Symbol oWord = wordFST->_osymbol.Find(ilbl);
 			if (oWord == "<eps>" || oWord == "eps")
@@ -126,19 +127,19 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 	triphoneFST->_osymbol = phoneFST->_osymbol;
 	//copying original fst
 
-	auto &fst_Triphone = triphoneFST->_fst;
-	auto &con_symbs = triphoneFST->_isymbol;
-	auto &lex_symbs = triphoneFST->_osymbol;
-	auto &c_state_symbs = triphoneFST->_ssymbol;
+	fst &fst_Triphone = triphoneFST->_fst;
+	SymbolTable &con_symbs = triphoneFST->_isymbol;
+	SymbolTable &lex_symbs = triphoneFST->_osymbol;
+	SymbolTable &c_state_symbs = triphoneFST->_ssymbol;
 
 
 	//step1:L-Biphone expanding. No labeling yet.
 
 	//map of state-iarc
-	auto arcs_in = triphoneFST->updateArcIn();
+	std::map<StateId, std::vector<Arc_Pos> > arcs_in = triphoneFST->updateArcIn();
 	for (int i = 0; i < fst_Triphone.NumStates(); i++)//iterating over all states, expanding all corresponding arcs and states.
 	{
-		auto &arcin = arcs_in[i];
+		std::vector<Arc_Pos> &arcin = arcs_in[i];
 		if (arcin.empty())
 		{
 			std::cout << "warning: state " << i << " has no arcin." << std::endl;
@@ -155,18 +156,18 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 			}
 			if (prev_string2id.size()>1)//expand of differs.
 			{
-				auto it = prev_string2id.begin(); //初始化map的迭代器it
+				std::map<Symbol, std::vector<Arc_Pos> >::iterator it = prev_string2id.begin(); //初始化map的迭代器it
 				it++;//跳过第一组入弧，让它们和原来的状态连着就好
 				for (; it != prev_string2id.end(); it++) //依次处理各组弧
 				{
-					auto &prev_ids = it->second; //引用出一组同输入的Arc_Pos元素列表
+					std::vector<Arc_Pos> &prev_ids = it->second; //引用出一组同输入的Arc_Pos元素列表
 					int newstate_id = fst_Triphone.AddState();//分裂出新状态并且记下其ID
 					arcs_in[newstate_id] = prev_ids;//顺便在arcs_in列表中加入此新状态的入弧
 
 
 					for (int k = 0; k < prev_ids.size(); k++) //链接本组同输入的弧和新状态
 					{
-						auto & in_arc = fst_Triphone.findArc(prev_ids[k]);
+						Arc & in_arc = fst_Triphone.findArc(prev_ids[k]);
 						in_arc.nextstate = newstate_id;
 						// 						fst_Triphone.AddArc(prev_ids[k].s,Arc(in_arc.ilabel,in_arc.olabel,in_arc.weight,newstate_id) );
 					}
@@ -180,8 +181,8 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 	arcs_in = triphoneFST->updateArcIn();
 	for (int i = 0; i < fst_Triphone.NumStates(); i++)//iterating over all states, expanding all corresponding arcs and states.
 	{
-		auto &it_state = fst_Triphone.states[i];
-		auto &arcout = it_state.arcs;
+		State &it_state = fst_Triphone.states[i];
+		std::vector<Arc> &arcout = it_state.arcs;
 		if (arcout.empty())
 		{
 			std::cout << "warning: state " << i << " has no arcout." << std::endl;
@@ -198,7 +199,7 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 			}
 			if (next_string2id.size()>1)//expand of differs.
 			{
-				auto it = next_string2id.begin(); //初始化map的迭代器it
+				std::map<Symbol, std::vector<Arc> >::iterator it = next_string2id.begin(); //初始化map的迭代器it
 
 
 				it_state.arcs = it->second;
@@ -206,16 +207,16 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 
 				for (; it != next_string2id.end(); it++) //依次处理各组弧
 				{
-					auto &next_ids = it->second; //引用出一组同输入的Arc_Pos元素列表
+					std::vector<Arc> &next_ids = it->second; //引用出一组同输入的Arc_Pos元素列表
 					int newstate_id = fst_Triphone.AddState();//分裂出新状态并且记下其ID
 					// 					arcs_in[newstate_id] = next_ids;//顺便在arcs_in列表中加入此新状态的入弧
 					fst_Triphone.states[newstate_id].arcs = next_ids;
 					arcs_in = triphoneFST->updateArcIn();//TODO:可以优化掉？
-					auto & in_arcs = arcs_in[i];
+					std::vector<Arc_Pos> & in_arcs = arcs_in[i];
 					for (int k = 0; k < in_arcs.size(); k++) //链接本组同输入的弧和新状态
 					{
-						auto & in_arc_pos = in_arcs[k];
-						auto in_arc = fst_Triphone.findArc(in_arc_pos);
+						Arc_Pos & in_arc_pos = in_arcs[k];
+						Arc in_arc = fst_Triphone.findArc(in_arc_pos);
 						Arc temp4(in_arc.ilabel, in_arc.olabel, in_arc.weight, newstate_id);
 						fst_Triphone.AddArc(in_arc_pos.s, temp4);
 					}
@@ -326,7 +327,7 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 		for (size_t a = 0; a < it_state.arcs.size(); a++)
 		{
 			Arc &it_arc = it_state.arcs[a];
-			auto it_map=mapTiedList.find(con_symbs.Find(it_arc.ilabel));
+			std::map < std::string, std::string >::iterator it_map = mapTiedList.find(con_symbs.Find(it_arc.ilabel));
 			if (it_map != mapTiedList.end())
 			{
 				it_arc.ilabel = con_symbs.AddSymbol(it_map->second);
@@ -347,11 +348,12 @@ void Sent2Fst::Arc2LexFst(int iState, int idArc, Symbol oWord, vvstr lexs, WFST 
 	Arc thearc = thefst.states[iState].arcs[idArc];
 	StateId oState = thearc.nextstate;
 
-	for (auto lex : lexs)//support multi-tone
+	for (int i = 0; i < lexs.size();i++)//(auto lex : lexs)//support multi-tone
 	{
+		std::vector<std::string> lex = lexs[i];
 		int prev_state_id = iState;
 		int new_state_id;
-		auto it_Phone = lex.begin();
+		std::vector<std::string>::iterator it_Phone = lex.begin();
 		for (; it_Phone != lex.end() - 1; it_Phone++)
 		{
 			//insert state o

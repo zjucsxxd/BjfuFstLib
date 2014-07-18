@@ -50,7 +50,7 @@ namespace bjfufst{
 
 	Label SymbolTable::Find(const Symbol & symbol) const
 	{
-		auto it = _map_sym_lbl.find(symbol);
+		std::map<Symbol, Label>::const_iterator it = _map_sym_lbl.find(symbol);
 		if (it==_map_sym_lbl.end())
 		{
 			return -1;
@@ -61,9 +61,10 @@ namespace bjfufst{
 	bool SymbolTable::WriteText(const char * filename)
 	{
 		std::ofstream ofile(filename);
-		for (auto & record:_map_lbl_sym)
+		for (std::map<Label, Symbol>::iterator it = _map_lbl_sym.begin(); it != _map_lbl_sym.end();it++)// (auto & record:_map_lbl_sym)
 		{
-			ofile << record.first << '\t' << record.second << '\n';
+
+			ofile << it->first << '\t' << it->second << '\n';
 		}
 		return true;
 	}
@@ -83,7 +84,7 @@ namespace bjfufst{
 
 	Symbol SymbolTable::Find(const Label &label) const
 	{
-		auto it = _map_lbl_sym.find(label);
+		std::map<Label,Symbol>::const_iterator it = _map_lbl_sym.find(label);
 		if (it == _map_lbl_sym.end())
 		{
 			return "";
@@ -113,9 +114,10 @@ namespace bjfufst{
 		Label lbl1, lbl2;
 		lbl1 = 0;
 
-		for (auto & it:_map_lbl_sym)
+		for (std::map<Label, Symbol>::iterator it = _map_lbl_sym.begin(); it != _map_lbl_sym.end(); it++)//(auto & it:_map_lbl_sym)
 		{
-			lbl2 = it.first;
+			
+			lbl2 = it->first;
 			if (lbl2-lbl1!=1)
 			{
 				break;

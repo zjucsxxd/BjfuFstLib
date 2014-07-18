@@ -30,7 +30,8 @@ namespace bjfufst{
 
 	StateId fst::AddState()
 	{
-		this->states.emplace_back();
+		this->states.push_back(State());
+		//this->states.emplace_back();
 		return this->states.size() - 1;
 	}
 
@@ -59,10 +60,12 @@ namespace bjfufst{
 		std::ofstream ofile(filename);
 
 		StateId src_state_id = 0;
-		for (auto & state_it : states)
+		for (int s = 0; s < states.size(); s++)//(auto & state_it : states)
 		{
-			for (auto & arc_it : state_it.arcs)
+			State & state_it = states[s];
+			for (int a = 0; a < state_it.arcs.size();a++)//(auto & arc_it : state_it.arcs)
 			{
+				Arc & arc_it = state_it.arcs[a];
 				ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << arc_it.ilabel << '\t' << arc_it.olabel << '\t'<<arc_it.weight<<'\n';
 			}
 			src_state_id++;
@@ -76,10 +79,12 @@ namespace bjfufst{
 		std::ofstream ofile(filename);
 
 		StateId src_state_id = 0;
-		for (auto & state_it : states)
+		for (int s = 0; s < states.size(); s++)//(auto & state_it : states)
 		{
-			for (auto & arc_it : state_it.arcs)
+			State & state_it = states[s];
+			for (int a = 0; a < state_it.arcs.size(); a++)//(auto & arc_it : state_it.arcs)
 			{
+				Arc & arc_it = state_it.arcs[a];
 				ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
 			}
 			src_state_id++;
@@ -180,11 +185,13 @@ namespace bjfufst{
 
 
 		StateId src_state_id = 0;
-		for (auto & state_it : states)
+		for (int s = 0; s < states.size(); s++)//(auto & state_it : states)
 		{
-			for (auto & arc_it : state_it.arcs)
+			State & state_it = states[s];
+			for (int a = 0; a < state_it.arcs.size(); a++)//(auto & arc_it : state_it.arcs)
 			{
-// 				ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
+				Arc & arc_it = state_it.arcs[a];
+				// ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
 				if (print_symbols)
 				{
 					ofile << src_state_id << " -> " << arc_it.nextstate << " [label=\"" << arc_it.ilabel << '.' << isymbs.Find(arc_it.ilabel) << ':' << arc_it.ilabel << '.'<< osymbs.Find(arc_it.olabel) << ',' << arc_it.weight << "\"];\n";

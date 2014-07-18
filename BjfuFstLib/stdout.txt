@@ -1,1001 +1,3452 @@
 wordfst0
+warning: state 0 has no arcin.
+warning: state 1 has no arcin.
+warning: state 0 has no arcout.
+warning: state 12 has no arcout.
 wordfst1
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst2
+warning: state 0 has no arcin.
+warning: state 10 has no arcin.
+warning: state 9 has no arcout.
+warning: state 12 has no arcout.
+warning: state 42 has no arcout.
 wordfst3
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst4
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst5
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 12 has no arcout.
 wordfst6
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
 wordfst7
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst8
+warning: state 0 has no arcin.
+warning: state 20 has no arcout.
 wordfst9
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst10
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst11
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst12
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst13
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
+warning: state 37 has no arcout.
 wordfst14
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst15
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst16
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst17
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 10 has no arcin.
+warning: state 1 has no arcout.
+warning: state 9 has no arcout.
+warning: state 18 has no arcout.
+warning: state 82 has no arcout.
 wordfst18
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst19
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst20
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst21
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst22
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst23
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst24
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst25
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst26
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst27
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst28
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst29
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst30
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst31
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst32
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst33
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst34
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst35
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst36
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst37
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst38
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst39
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst40
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst41
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst42
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst43
+warning: state 0 has no arcin.
+warning: state 23 has no arcout.
 wordfst44
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst45
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst46
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst47
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst48
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst49
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst50
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 13 has no arcout.
 wordfst51
+warning: state 0 has no arcin.
+warning: state 20 has no arcout.
 wordfst52
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst53
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst54
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst55
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst56
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 9 has no arcout.
 wordfst57
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst58
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst59
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst60
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst61
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst62
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst63
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 14 has no arcout.
 wordfst64
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst65
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst66
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst67
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst68
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst69
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst70
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst71
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst72
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst73
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst74
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst75
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst76
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst77
+warning: state 0 has no arcin.
+warning: state 7 has no arcin.
+warning: state 6 has no arcout.
+warning: state 10 has no arcout.
 wordfst78
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst79
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst80
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 8 has no arcout.
+warning: state 30 has no arcout.
 wordfst81
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst82
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 12 has no arcout.
 wordfst83
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst84
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst85
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 5 has no arcin.
+warning: state 3 has no arcout.
+warning: state 4 has no arcout.
+warning: state 12 has no arcout.
+warning: state 46 has no arcout.
 wordfst86
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst87
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst88
+warning: state 0 has no arcin.
+warning: state 10 has no arcin.
+warning: state 9 has no arcout.
+warning: state 15 has no arcout.
 wordfst89
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst90
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst91
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst92
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst93
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst94
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst95
+warning: state 0 has no arcin.
+warning: state 14 has no arcin.
+warning: state 13 has no arcout.
+warning: state 17 has no arcout.
+warning: state 51 has no arcout.
 wordfst96
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst97
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst98
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst99
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst100
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst101
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 8 has no arcout.
+warning: state 21 has no arcout.
 wordfst102
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst103
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst104
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst105
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst106
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst107
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst108
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst109
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst110
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst111
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst112
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst113
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst114
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst115
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst116
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst117
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst118
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst119
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst120
+warning: state 0 has no arcin.
+warning: state 12 has no arcin.
+warning: state 11 has no arcout.
+warning: state 13 has no arcout.
+warning: state 48 has no arcout.
 wordfst121
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst122
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst123
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
 wordfst124
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst125
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst126
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst127
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst128
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst129
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 9 has no arcout.
 wordfst130
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst131
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst132
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst133
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst134
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst135
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst136
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst137
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 13 has no arcout.
 wordfst138
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst139
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst140
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst141
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst142
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst143
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst144
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst145
+warning: state 0 has no arcin.
+warning: state 21 has no arcout.
 wordfst146
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst147
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 14 has no arcout.
 wordfst148
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst149
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst150
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst151
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst152
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst153
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst154
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst155
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 16 has no arcout.
 wordfst156
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst157
+warning: state 0 has no arcin.
+warning: state 21 has no arcout.
 wordfst158
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst159
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst160
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst161
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst162
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst163
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst164
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst165
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst166
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst167
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst168
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst169
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst170
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 10 has no arcout.
 wordfst171
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst172
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst173
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst174
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst175
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst176
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst177
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst178
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst179
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst180
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst181
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst182
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst183
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst184
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 16 has no arcout.
+warning: state 42 has no arcout.
 wordfst185
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 8 has no arcout.
+warning: state 20 has no arcout.
 wordfst186
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst187
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst188
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 14 has no arcout.
 wordfst189
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst190
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 18 has no arcout.
 wordfst191
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst192
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 6 has no arcout.
+warning: state 12 has no arcout.
 wordfst193
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
 wordfst194
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 7 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
+warning: state 10 has no arcout.
+warning: state 26 has no arcout.
 wordfst195
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst196
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst197
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst198
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst199
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst200
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst201
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst202
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst203
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst204
+warning: state 0 has no arcin.
+warning: state 14 has no arcin.
+warning: state 13 has no arcout.
+warning: state 15 has no arcout.
+warning: state 52 has no arcout.
 wordfst205
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst206
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst207
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst208
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst209
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 9 has no arcout.
 wordfst210
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst211
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst212
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst213
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst214
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst215
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst216
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst217
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst218
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst219
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst220
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst221
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst222
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst223
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst224
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst225
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst226
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst227
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst228
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst229
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst230
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst231
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst232
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst233
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst234
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst235
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst236
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst237
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst238
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 7 has no arcout.
 wordfst239
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst240
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 12 has no arcout.
 wordfst241
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst242
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst243
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst244
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst245
+warning: state 0 has no arcin.
+warning: state 21 has no arcout.
 wordfst246
+warning: state 0 has no arcin.
+warning: state 26 has no arcout.
 wordfst247
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst248
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst249
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst250
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst251
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst252
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst253
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst254
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst255
+warning: state 0 has no arcin.
+warning: state 9 has no arcin.
+warning: state 8 has no arcout.
+warning: state 12 has no arcout.
 wordfst256
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst257
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst258
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 6 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
+warning: state 12 has no arcout.
 wordfst259
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst260
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst261
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst262
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst263
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst264
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst265
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 14 has no arcout.
 wordfst266
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst267
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst268
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst269
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst270
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst271
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst272
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst273
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst274
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst275
+warning: state 0 has no arcin.
+warning: state 28 has no arcout.
 wordfst276
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst277
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst278
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst279
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst280
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst281
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst282
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst283
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst284
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 11 has no arcout.
+warning: state 38 has no arcout.
 wordfst285
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst286
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst287
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst288
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst289
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 9 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
+warning: state 14 has no arcout.
+warning: state 52 has no arcout.
 wordfst290
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst291
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst292
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst293
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst294
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst295
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst296
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst297
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst298
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 7 has no arcout.
 wordfst299
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst300
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 14 has no arcout.
 wordfst301
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst302
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst303
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst304
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst305
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst306
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst307
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst308
+warning: state 0 has no arcin.
+warning: state 23 has no arcout.
 wordfst309
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst310
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst311
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst312
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 5 has no arcin.
+warning: state 1 has no arcout.
+warning: state 4 has no arcout.
+warning: state 11 has no arcout.
 wordfst313
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst314
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst315
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst316
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 10 has no arcout.
+warning: state 27 has no arcout.
 wordfst317
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst318
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst319
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst320
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst321
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 13 has no arcout.
 wordfst322
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst323
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst324
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst325
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst326
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst327
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst328
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 12 has no arcout.
 wordfst329
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst330
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst331
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst332
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst333
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst334
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst335
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst336
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 7 has no arcin.
+warning: state 2 has no arcout.
+warning: state 6 has no arcout.
+warning: state 13 has no arcout.
 wordfst337
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst338
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 7 has no arcin.
+warning: state 2 has no arcout.
+warning: state 6 has no arcout.
+warning: state 9 has no arcout.
 wordfst339
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst340
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 13 has no arcout.
 wordfst341
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst342
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst343
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst344
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
 wordfst345
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst346
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst347
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst348
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst349
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst350
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst351
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst352
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst353
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst354
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst355
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst356
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst357
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst358
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst359
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst360
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
 wordfst361
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst362
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst363
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst364
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst365
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
 wordfst366
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst367
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 14 has no arcout.
 wordfst368
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst369
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst370
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst371
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst372
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst373
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst374
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst375
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst376
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 9 has no arcout.
 wordfst377
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst378
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst379
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst380
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst381
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst382
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst383
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst384
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst385
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst386
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst387
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst388
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 10 has no arcout.
 wordfst389
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst390
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
 wordfst391
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst392
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst393
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst394
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst395
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst396
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst397
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst398
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst399
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst400
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst401
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst402
+warning: state 0 has no arcin.
+warning: state 9 has no arcin.
+warning: state 8 has no arcout.
+warning: state 12 has no arcout.
 wordfst403
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 9 has no arcout.
 wordfst404
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst405
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst406
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst407
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst408
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst409
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst410
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 13 has no arcout.
 wordfst411
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst412
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst413
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst414
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst415
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst416
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst417
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst418
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst419
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst420
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst421
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst422
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 11 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
+warning: state 12 has no arcout.
 wordfst423
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst424
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst425
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst426
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst427
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
 wordfst428
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst429
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst430
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 7 has no arcout.
+warning: state 20 has no arcout.
 wordfst431
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst432
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 13 has no arcout.
 wordfst433
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst434
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst435
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst436
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst437
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst438
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst439
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst440
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst441
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst442
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst443
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst444
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
 wordfst445
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst446
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst447
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst448
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst449
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst450
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst451
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 15 has no arcout.
 wordfst452
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst453
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst454
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst455
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 7 has no arcout.
 wordfst456
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 17 has no arcin.
+warning: state 2 has no arcout.
+warning: state 16 has no arcout.
+warning: state 19 has no arcout.
 wordfst457
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst458
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 9 has no arcout.
 wordfst459
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst460
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst461
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst462
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst463
+warning: state 0 has no arcin.
+warning: state 7 has no arcin.
+warning: state 6 has no arcout.
+warning: state 10 has no arcout.
 wordfst464
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst465
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst466
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst467
+warning: state 0 has no arcin.
+warning: state 21 has no arcout.
 wordfst468
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst469
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst470
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst471
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst472
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst473
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst474
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst475
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst476
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst477
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst478
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst479
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst480
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst481
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst482
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst483
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst484
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst485
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst486
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst487
+warning: state 0 has no arcin.
+warning: state 24 has no arcout.
 wordfst488
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst489
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst490
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst491
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst492
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst493
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst494
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst495
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst496
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst497
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst498
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst499
+warning: state 0 has no arcin.
+warning: state 20 has no arcout.
 wordfst500
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst501
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst502
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst503
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst504
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst505
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst506
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst507
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst508
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst509
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst510
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst511
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst512
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst513
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst514
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst515
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst516
+warning: state 0 has no arcin.
+warning: state 15 has no arcin.
+warning: state 14 has no arcout.
+warning: state 16 has no arcout.
 wordfst517
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst518
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst519
+warning: state 0 has no arcin.
+warning: state 11 has no arcin.
+warning: state 10 has no arcout.
+warning: state 12 has no arcout.
 wordfst520
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst521
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst522
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst523
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst524
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst525
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst526
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst527
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst528
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst529
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst530
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst531
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst532
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst533
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst534
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst535
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst536
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst537
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst538
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst539
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst540
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst541
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst542
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst543
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst544
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst545
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst546
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst547
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst548
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst549
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst550
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst551
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst552
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst553
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst554
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst555
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst556
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst557
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 11 has no arcout.
 wordfst558
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst559
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst560
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst561
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst562
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst563
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 5 has no arcin.
+warning: state 1 has no arcout.
+warning: state 4 has no arcout.
+warning: state 21 has no arcout.
 wordfst564
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 7 has no arcout.
 wordfst565
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst566
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 12 has no arcout.
+warning: state 35 has no arcout.
 wordfst567
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst568
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst569
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst570
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst571
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst572
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst573
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst574
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst575
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst576
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst577
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
 wordfst578
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 8 has no arcout.
 wordfst579
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst580
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst581
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst582
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst583
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst584
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst585
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst586
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst587
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst588
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst589
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst590
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
 wordfst591
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst592
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 12 has no arcin.
+warning: state 4 has no arcout.
+warning: state 11 has no arcout.
+warning: state 18 has no arcout.
 wordfst593
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst594
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst595
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst596
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst597
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst598
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst599
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst600
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst601
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst602
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst603
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst604
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst605
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst606
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 12 has no arcout.
 wordfst607
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst608
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst609
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst610
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst611
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst612
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst613
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 13 has no arcout.
 wordfst614
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 20 has no arcout.
 wordfst615
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 14 has no arcout.
 wordfst616
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst617
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst618
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst619
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst620
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst621
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst622
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst623
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst624
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst625
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst626
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst627
+warning: state 0 has no arcin.
+warning: state 9 has no arcin.
+warning: state 8 has no arcout.
+warning: state 11 has no arcout.
+warning: state 42 has no arcout.
+warning: state 43 has no arcout.
 wordfst628
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst629
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst630
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst631
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst632
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 19 has no arcout.
 wordfst633
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst634
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 10 has no arcout.
 wordfst635
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst636
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 12 has no arcout.
 wordfst637
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst638
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst639
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst640
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst641
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst642
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst643
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst644
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst645
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 16 has no arcout.
 wordfst646
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst647
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst648
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst649
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst650
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst651
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst652
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 8 has no arcout.
 wordfst653
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst654
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 10 has no arcout.
+warning: state 29 has no arcout.
 wordfst655
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst656
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst657
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst658
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst659
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst660
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst661
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst662
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst663
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst664
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst665
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst666
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst667
+warning: state 0 has no arcin.
+warning: state 13 has no arcin.
+warning: state 12 has no arcout.
+warning: state 15 has no arcout.
 wordfst668
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst669
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst670
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst671
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst672
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst673
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst674
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst675
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst676
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst677
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst678
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 8 has no arcin.
+warning: state 10 has no arcin.
+warning: state 5 has no arcout.
+warning: state 7 has no arcout.
+warning: state 9 has no arcout.
+warning: state 12 has no arcout.
+warning: state 32 has no arcout.
+warning: state 33 has no arcout.
+warning: state 34 has no arcout.
+warning: state 35 has no arcout.
 wordfst679
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst680
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst681
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst682
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst683
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst684
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst685
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst686
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst687
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst688
+warning: state 0 has no arcin.
+warning: state 9 has no arcin.
+warning: state 8 has no arcout.
+warning: state 10 has no arcout.
 wordfst689
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst690
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst691
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst692
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst693
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst694
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst695
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 15 has no arcout.
 wordfst696
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst697
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst698
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 11 has no arcout.
 wordfst699
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst700
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst701
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst702
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst703
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst704
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 11 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
+warning: state 15 has no arcout.
 wordfst705
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst706
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst707
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 7 has no arcout.
 wordfst708
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst709
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst710
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst711
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst712
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst713
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst714
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst715
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst716
+warning: state 0 has no arcin.
+warning: state 20 has no arcout.
 wordfst717
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst718
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst719
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst720
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
 wordfst721
+warning: state 0 has no arcin.
+warning: state 14 has no arcin.
+warning: state 21 has no arcin.
+warning: state 13 has no arcout.
+warning: state 20 has no arcout.
+warning: state 25 has no arcout.
+warning: state 86 has no arcout.
 wordfst722
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst723
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst724
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst725
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst726
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst727
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst728
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst729
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst730
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst731
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst732
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst733
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst734
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst735
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst736
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst737
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst738
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst739
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst740
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst741
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst742
+warning: state 0 has no arcin.
+warning: state 16 has no arcin.
+warning: state 15 has no arcout.
+warning: state 17 has no arcout.
+warning: state 69 has no arcout.
 wordfst743
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst744
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst745
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst746
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst747
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst748
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst749
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst750
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst751
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst752
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst753
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst754
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst755
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 11 has no arcout.
 wordfst756
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst757
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst758
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst759
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst760
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst761
+warning: state 0 has no arcin.
+warning: state 8 has no arcin.
+warning: state 7 has no arcout.
+warning: state 13 has no arcout.
 wordfst762
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst763
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst764
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst765
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst766
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst767
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst768
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst769
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst770
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst771
+warning: state 0 has no arcin.
+warning: state 20 has no arcout.
 wordfst772
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst773
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst774
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst775
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst776
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst777
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 5 has no arcout.
 wordfst778
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst779
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst780
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst781
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst782
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst783
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst784
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst785
+warning: state 0 has no arcin.
+warning: state 11 has no arcin.
+warning: state 10 has no arcout.
+warning: state 12 has no arcout.
+warning: state 33 has no arcout.
 wordfst786
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst787
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 14 has no arcout.
+warning: state 49 has no arcout.
 wordfst788
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst789
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst790
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst791
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst792
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst793
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst794
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 5 has no arcin.
+warning: state 2 has no arcout.
+warning: state 4 has no arcout.
+warning: state 10 has no arcout.
 wordfst795
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst796
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst797
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 9 has no arcout.
 wordfst798
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst799
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst800
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 8 has no arcout.
 wordfst801
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst802
+warning: state 0 has no arcin.
+warning: state 20 has no arcin.
+warning: state 19 has no arcout.
+warning: state 25 has no arcout.
 wordfst803
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst804
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst805
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst806
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst807
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst808
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst809
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst810
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 6 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
+warning: state 12 has no arcout.
 wordfst811
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst812
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst813
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst814
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 16 has no arcout.
 wordfst815
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst816
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst817
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst818
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst819
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst820
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst821
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst822
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst823
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst824
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst825
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst826
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst827
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 12 has no arcout.
 wordfst828
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst829
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst830
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst831
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst832
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst833
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst834
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst835
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst836
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 7 has no arcout.
 wordfst837
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst838
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst839
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 14 has no arcin.
+warning: state 2 has no arcout.
+warning: state 13 has no arcout.
+warning: state 23 has no arcout.
 wordfst840
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst841
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst842
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst843
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 9 has no arcout.
 wordfst844
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 10 has no arcout.
 wordfst845
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst846
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst847
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst848
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst849
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst850
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst851
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst852
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst853
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst854
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 10 has no arcout.
 wordfst855
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst856
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst857
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst858
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst859
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst860
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst861
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst862
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst863
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst864
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst865
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst866
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 6 has no arcout.
+warning: state 22 has no arcout.
+warning: state 23 has no arcout.
 wordfst867
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst868
+warning: state 0 has no arcin.
+warning: state 19 has no arcout.
 wordfst869
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst870
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst871
+warning: state 0 has no arcin.
+warning: state 5 has no arcin.
+warning: state 4 has no arcout.
+warning: state 10 has no arcout.
 wordfst872
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst873
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst874
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst875
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 11 has no arcout.
 wordfst876
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst877
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst878
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst879
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst880
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst881
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst882
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst883
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst884
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst885
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst886
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst887
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst888
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst889
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst890
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst891
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 6 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
+warning: state 16 has no arcout.
 wordfst892
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst893
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst894
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst895
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst896
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst897
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst898
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst899
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst900
+warning: state 0 has no arcin.
+warning: state 9 has no arcin.
+warning: state 8 has no arcout.
+warning: state 15 has no arcout.
 wordfst901
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst902
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst903
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst904
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst905
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst906
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst907
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst908
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst909
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 9 has no arcout.
 wordfst910
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst911
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst912
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst913
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst914
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 6 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
+warning: state 7 has no arcout.
+warning: state 14 has no arcout.
 wordfst915
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst916
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst917
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst918
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst919
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst920
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 14 has no arcout.
 wordfst921
+warning: state 0 has no arcin.
+warning: state 14 has no arcin.
+warning: state 15 has no arcin.
+warning: state 13 has no arcout.
+warning: state 14 has no arcout.
+warning: state 17 has no arcout.
 wordfst922
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst923
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst924
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst925
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
 wordfst926
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst927
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 6 has no arcout.
+warning: state 19 has no arcout.
+warning: state 20 has no arcout.
 wordfst928
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst929
+warning: state 0 has no arcin.
+warning: state 17 has no arcout.
 wordfst930
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst931
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst932
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 15 has no arcout.
 wordfst933
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst934
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 5 has no arcout.
 wordfst935
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst936
+warning: state 0 has no arcin.
+warning: state 4 has no arcout.
 wordfst937
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst938
+warning: state 0 has no arcin.
+warning: state 18 has no arcout.
 wordfst939
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst940
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst941
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 13 has no arcout.
 wordfst942
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst943
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst944
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 12 has no arcout.
 wordfst945
+warning: state 0 has no arcin.
+warning: state 9 has no arcin.
+warning: state 8 has no arcout.
+warning: state 17 has no arcout.
+warning: state 58 has no arcout.
 wordfst946
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst947
+warning: state 0 has no arcin.
+warning: state 14 has no arcout.
 wordfst948
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst949
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst950
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 20 has no arcout.
 wordfst951
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst952
+warning: state 0 has no arcin.
+warning: state 5 has no arcout.
 wordfst953
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 8 has no arcout.
+warning: state 29 has no arcout.
 wordfst954
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
 wordfst955
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 3 has no arcout.
+warning: state 9 has no arcout.
+warning: state 26 has no arcout.
 wordfst956
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst957
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst958
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst959
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst960
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst961
+warning: state 0 has no arcin.
+warning: state 12 has no arcout.
 wordfst962
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst963
+warning: state 0 has no arcin.
+warning: state 16 has no arcout.
 wordfst964
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst965
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst966
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst967
+warning: state 0 has no arcin.
+warning: state 3 has no arcout.
 wordfst968
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 11 has no arcout.
 wordfst969
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst970
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst971
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 9 has no arcout.
 wordfst972
+warning: state 0 has no arcin.
+warning: state 6 has no arcin.
+warning: state 5 has no arcout.
+warning: state 19 has no arcout.
 wordfst973
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst974
+warning: state 0 has no arcin.
+warning: state 4 has no arcin.
+warning: state 6 has no arcin.
+warning: state 3 has no arcout.
+warning: state 5 has no arcout.
+warning: state 16 has no arcout.
 wordfst975
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst976
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst977
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst978
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst979
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst980
+warning: state 0 has no arcin.
+warning: state 13 has no arcout.
 wordfst981
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst982
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst983
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst984
+warning: state 0 has no arcin.
+warning: state 6 has no arcout.
 wordfst985
+warning: state 0 has no arcin.
+warning: state 7 has no arcout.
 wordfst986
+warning: state 0 has no arcin.
+warning: state 15 has no arcout.
 wordfst987
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst988
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 6 has no arcout.
 wordfst989
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 11 has no arcin.
+warning: state 1 has no arcout.
+warning: state 10 has no arcout.
+warning: state 17 has no arcout.
 wordfst990
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst991
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst992
+warning: state 0 has no arcin.
+warning: state 11 has no arcout.
 wordfst993
+warning: state 0 has no arcin.
+warning: state 10 has no arcout.
 wordfst994
+warning: state 0 has no arcin.
+warning: state 9 has no arcout.
 wordfst995
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst996
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst997
+warning: state 0 has no arcin.
+warning: state 8 has no arcout.
 wordfst998
+warning: state 0 has no arcin.
+warning: state 3 has no arcin.
+warning: state 2 has no arcout.
+warning: state 7 has no arcout.
 wordfst999
-0.230000
+warning: state 0 has no arcin.
+warning: state 2 has no arcin.
+warning: state 1 has no arcout.
+warning: state 7 has no arcout.
+0.862000
