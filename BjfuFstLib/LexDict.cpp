@@ -1,43 +1,45 @@
 #include "LexDict.h"
+namespace bjfufst{
 
-
-
-
-void bjfufst::NodeWord::AppendPhones(std::vector<std::string> phones)
-{
-	//cast vector to stack here.
-	std::stack<std::string> stack_phones;
-	for (auto &it_phone : phones)
+	void LexDict::addLex(std::string word, std::string words)
 	{
-		stack_phones.push(it_phone);
+		_dict[word].push_back(words);
+		_dict[word].shrink_to_fit();
 	}
 
-	if (stack_phones.empty())
+	std::vector<std::vector<std::string> > LexDict::getLex(std::string word)
 	{
-		return;
-	}
-	else
-	{
-		std::string phone = stack_phones.pop();
-		this->strPhone = new char*[stack_phones.size()];
-		strcpy_s(strPhone, phone.c_str());
-		childPhones[childPhones.Insert(strPhone)].AppendPhones(phone);
-	}
-}
+		if (_dict.find(word) == _dict.end())
+		{
+			std::cout << "ERROR: no lex for " << word << std::endl;
+		}
+		std::vector<std::string> lexs;
+		std::vector<std::vector<std::string> > lexs_ret;
+		std::vector<std::string> phones;
 
-
-
-void bjfufst::NodePhone::AppendPhones(std::stack<std::string> & phones)
-{
-	if (phones.empty())
-	{
-		return;
+		lexs = _dict[word];
+		for (size_t i = 0; i < lexs.size(); i++)
+		{
+ 			std::string lex  = lexs[i];
+			split(lex, phones, " \t");
+			lexs_ret.push_back(phones);
+		}
+		return lexs_ret;
 	}
-	else
+
+	std::vector<std::vector<std::string> >LexDict::operator[](std::string word)
 	{
-		std::string phone = phones.pop();
-		this->strPhone = new char*[phone.size()];
-		strcpy_s(strPhone, phone.c_str());
-		childPhones[childPhones.Insert(strPhone)].AppendPhones(phone);
+		return this->getLex(word);
 	}
+
+	LexDict::LexDict()
+	{
+
+	}
+
+	LexDict::~LexDict()
+	{
+
+	}
+
 }

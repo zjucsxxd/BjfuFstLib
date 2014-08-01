@@ -17,10 +17,10 @@ namespace bjfufst{
 		size_t Insert(const T& elem);
 
 		//get an element from position
-		const T& GetAt(size_t pos);
+		const T GetAt(size_t pos);
 
 		//array-style operator,get an element from position
-		const T& operator[](size_t pos);
+		const T operator[](size_t pos);
 
 		//find an elem and return its pos.
 		//return size of array if not found.
@@ -56,7 +56,7 @@ namespace bjfufst{
 
 
 	template <class T>
-	const T& CompactSet<T>::GetAt(size_t pos)
+	const T CompactSet<T>::GetAt(size_t pos)
 	{
 		if (pos < 0 || pos >= arr_length)
 		{
@@ -68,6 +68,7 @@ namespace bjfufst{
 	template <class T>
 	size_t CompactSet<T>::Insert(const T& elem)
 	{
+		size_t pos;
 		if (pElems_arr == nullptr)//if empty, insert one single element and return initial location, that is zero.
 		{
 			arr_length = 1;
@@ -75,7 +76,7 @@ namespace bjfufst{
 			pElems_arr[0] = new T(elem);
 			return 0;
 		}
-		else if ((size_t pos=Find(elem))!=arr_length)//if elem already exists in array, do no modification and return position of elem.
+		else if ((pos=Find(elem))!=arr_length)//if elem already exists in array, do no modification and return position of elem.
 		{
 			return pos;
 		} 
@@ -104,7 +105,7 @@ namespace bjfufst{
 
 
 	template <class T>
-	const T& bjfufst::CompactSet<T>::operator[](size_t pos)
+	const T bjfufst::CompactSet<T>::operator[](size_t pos)
 	{
 		return GetAt(pos);
 	}
@@ -112,7 +113,8 @@ namespace bjfufst{
 	template <class T>
 	size_t bjfufst::CompactSet<T>::Find(const T& elem)
 	{
-		for (size_t i = 0; i < arr_length;i++)
+		size_t i;
+		for (i = 0; i < arr_length;i++)
 		{
 			if (*pElems_arr[i]==elem)
 			{

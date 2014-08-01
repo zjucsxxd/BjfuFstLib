@@ -85,7 +85,7 @@ void WFST::SaveCFastLM(const char * filename)
 	fastlm.fastStNode = this->_fst.startId;
 	fastlm.fastEdNode = this->_fst.finalId;
 
-	for (int i = 0; i < fastlm.nPhons;i++)
+	for (int i = 0; i < fastlm.nPhons; i++)
 	{
 		delete pPhons[i];
 	}
@@ -100,9 +100,12 @@ void WFST::SaveCFastLM(const char * filename)
 	fastlm.SaveFastLM(filename);
 }
 
-bool WFST::LoadFST(const char * filename)
+bool WFST::LoadFST(const char * filename, const char * isymbs,const char * osymbs)
 {
-	return _fst.ReadText(filename);
+	_fst.ReadText(filename);
+	_isymbol.ReadText(isymbs);
+	_osymbol.ReadText(osymbs);
+	return true;
 }
 
 bool WFST::SaveFST(const char * filename)

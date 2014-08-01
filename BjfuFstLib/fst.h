@@ -78,7 +78,7 @@ namespace bjfufst{
 		Arc& findArc(const Arc_Pos & pos);
 
 		//epsilon closure of state.
-		std::set<State> eps_closure(State state);
+		std::vector<StateId> eps_closure(StateId s);
 
 
 	public:

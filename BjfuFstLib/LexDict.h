@@ -1,72 +1,25 @@
-#include "CompactSet.h"
+#include "FstConventions.h"
 #include <vector>
-#include <stack>
 #include <string>
+#include <map>
+#include "CompactSet.h"
+#include <iostream>
 namespace bjfufst{
-	class NodeWord;
-	class NodePhone;
-	class LexDict;
 
 	class LexDict
 	{
 	public:
 		LexDict();
 		~LexDict();
+		void addLex(std::string word, std::string lexs);
+		std::vector<std::vector<std::string> >  getLex(std::string word);
+		std::vector<std::vector<std::string> >  operator[](std::string word);
+
 
 	private:
-		NodeWord initNode;
+		std::map<std::string,std::vector<std::string> > _dict;
 	};
 
-	LexDict::LexDict()
-	{
-	}
-
-	LexDict::~LexDict()
-	{
-	}
-
-	class NodeWord
-	{
-	public:
-		NodeWord();
-		~NodeWord();
-		void AppendPhones(std::vector<std::string> phones);
-	private:
-		char * strWord;
-		CompactSet<NodePhone> childPhones;
-	};
-
-
-	NodeWord::NodeWord()
-	{
-	}
-
-	NodeWord::~NodeWord()
-	{
-		childPhones.~CompactSet();
-		delete strWord;
-	}
-
-	class NodePhone
-	{
-	public:
-		NodePhone();
-		~NodePhone();
-		void AppendPhones(std::stack<std::string> & phones);
-
-	private:
-		char * strPhone;
-		CompactSet<NodePhone> childPhones;
-	};
-
-	NodePhone::NodePhone()
-	{
-	}
-
-	NodePhone::~NodePhone()
-	{
-		childPhones.~CompactSet();
-		delete strPhone;
-	}
+	
 
 }

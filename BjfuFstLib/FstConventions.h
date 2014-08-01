@@ -13,8 +13,11 @@ namespace bjfufst{
 	typedef float Weight;
 	typedef int StateId;
 	typedef std::string Symbol;
+	const Label EPS=0;
 
 }
+
+
 //splitting 
 void split(std::string line, std::vector<std::string> &parts, std::string pattern);
 

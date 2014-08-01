@@ -39,6 +39,9 @@
     <ClInclude Include="FastLM.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CompactSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="arc.cpp">
@@ -66,6 +69,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="WFST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LexDict.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

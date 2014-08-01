@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arc.h" />
+    <ClInclude Include="CompactSet.h" />
     <ClInclude Include="FastLM.h" />
     <ClInclude Include="fst.h" />
     <ClInclude Include="FstConventions.h" />
@@ -25,6 +26,7 @@
     <ClCompile Include="FastLM.cpp" />
     <ClCompile Include="fst.cpp" />
     <ClCompile Include="FstConventions.cpp" />
+    <ClCompile Include="LexDict.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sent2Fst.cpp" />
     <ClCompile Include="state.cpp" />

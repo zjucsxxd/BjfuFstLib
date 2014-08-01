@@ -12,6 +12,7 @@
 #include "fst.h"
 #include "SymbolTable.h"
 #include "FastLM.h"
+#include "LexDict.h"
 using namespace bjfufst;
 
 void split(Symbol line, std::vector<Symbol> &parts, Symbol pattern);
@@ -20,15 +21,17 @@ typedef std::vector<Symbol> vstr;
 typedef std::vector<std::vector<Symbol> > vvstr;
 
 
-typedef std::hash_map<Symbol, vvstr > LexDict;
+// typedef std::hash_map<Symbol, vvstr > LexDict;
 
 
 class WFST
 {
 public:
 	//载入FST文件
-	bool LoadFST(const char * filename);	
+//	bool LoadFST(const char * filename);	
 
+	bool LoadFST(const char * filename, const char * isymbs, const char * osymbs);
+	
 	//储存FST文件
 	bool SaveFST(const char * filename);	
 

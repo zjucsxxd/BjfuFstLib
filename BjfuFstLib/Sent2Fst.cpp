@@ -60,14 +60,16 @@ bool Sent2Fst::LoadLexDic(const char * filename)
 	Symbol line;
 	std::vector<Symbol> parts;
 	Symbol word;
-
+	std::string lexline;
 	while (getline(lexFile, line, '\n'))
 	{
 		split(line, parts, " ");
 		word = parts[0];
+		lexline = line.substr(word.size()+1, line.size());
+		lexDict.addLex(word,lexline);
 		parts.erase(parts.begin());
 		phone_list.insert(parts.begin(), parts.end());
-		lexDict[word].push_back(parts);
+
 	}
 
 	return false;
@@ -239,69 +241,124 @@ bool Sent2Fst::PhoneFST2TriphoneFST(const WFST * phoneFST, WFST * triphoneFST)
 	}//keeping old monophone iLabel
 
 	Label lbl_prev, lbl_curr, lbl_next;
+	size_t states_size, arcs_size;
 
-	for (StateId s = 0; s < fst_Triphone.states.size(); s++)
+	states_size = fst_Triphone.states.size();
+	for (StateId s = 0; s < states_size ; s++)
 	{
-		State & it_state = fst_Triphone.states[s];
-		for (size_t a = 0; a < it_state.arcs.size(); a++)
+		State it_state = fst_Triphone.states[s];
+		arcs_size = it_state.arcs.size();
+		for (size_t a = 0; a < arcs_size; a++)
 		{
-			Arc &it_arc = it_state.arcs[a];
+			Arc it_arc = it_state.arcs[a];
 			lbl_curr = monoiLabel[Arc_Pos(s, a)];
-			if (lbl_curr == 0) //no triphone for eps arc.
+			if (lbl_curr == EPS) //no triphone for eps arc.
 			{
 				//TODO: rewrite eps operation.
-			}
 				continue;
+			}
 
 			if (arcs_in[s].size() > 0)//find prev lbl
 			{
 				lbl_prev = monoiLabel[arcs_in[s][0]];
 
-				Arc_Pos it_arc_pos(s, a);
-				while (lbl_prev == 0)
+				if (lbl_prev == EPS)//no triphone for arcs close to eps arc.
 				{
-					if (arcs_in[s].size() == 0)
-					{
-						lbl_prev = 0;
-						break;
-					}
-					it_arc_pos = arcs_in[it_arc_pos.s][0]; //iterate to prev arc.
-					lbl_prev = monoiLabel[it_arc_pos];
+					continue;
 				}
+				// 				Arc_Pos it_arc_pos(s, a);
+				// 				while (lbl_prev == EPS)
+				// 				{
+				// 					if (arcs_in[s].size() == 0)
+				// 					{
+				// 						lbl_prev = 0;
+				// 						break;
+				// 					}
+				// 					it_arc_pos = arcs_in[it_arc_pos.s][0]; //iterate to prev arc.
+				// 					lbl_prev = monoiLabel[it_arc_pos];
+				// 				}
 			}
 			else
 			{
 				lbl_prev = 0;
 			}
 
-			if (fst_Triphone.states[it_arc.nextstate].arcs.size() > 0)
+			
+			if (fst_Triphone.states[it_arc.nextstate].arcs.size() > 0)//find next lbl
 			{
 				lbl_next = monoiLabel[Arc_Pos(it_arc.nextstate, 0)];
 
-
-
-				Arc_Pos it_arc_pos(s, a);
-				while (lbl_next == 0)
+				if (lbl_next==EPS)//no triphone for arcs close to eps arc.
 				{
-					it_arc_pos = Arc_Pos(fst_Triphone.findArc(it_arc_pos).nextstate, 0); //iterate to next arc.
-					lbl_next = monoiLabel[it_arc_pos];
-					if (fst_Triphone.states[fst_Triphone.findArc(it_arc_pos).nextstate].arcs.size() == 0)
+
+//					continue;
+					//make two arcs that jump over the arc and succeeding non-eps arc .
+					std::vector<StateId> closure_states = fst_Triphone.eps_closure(it_arc.nextstate);
+					for (std::vector<StateId>::iterator it_closure_state_id = closure_states.begin();
+						it_closure_state_id != closure_states.end();
+						it_closure_state_id++)
 					{
-						lbl_next = 0;
-						break;
+						//add the arcs and state
+						//---->X---x-a+b---->A----a-b+y---->B---->Y
+						lbl_next = fst_Triphone.states[*it_closure_state_id].arcs[0].ilabel;
+						StateId newState = fst_Triphone.AddState();
+						Symbol triphone_symbol_eps;
+						triphone_symbol_eps=
+							triphoneFST->_isymbol.Find(lbl_prev)+
+							triphoneFST->_isymbol.Find(lbl_curr)+
+							triphoneFST->_isymbol.Find(lbl_next);
+						Arc newarc;
+						newarc = Arc(
+							triphoneFST->_isymbol.AddSymbol(triphone_symbol_eps),
+							it_arc.olabel,
+							it_arc.weight,
+							newState
+							);
+						fst_Triphone.AddArc(s,newarc);
+
+						triphone_symbol_eps =
+							triphoneFST->_isymbol.Find(lbl_curr) +
+							triphoneFST->_isymbol.Find(lbl_next) +
+							triphoneFST->_isymbol.Find(fst_Triphone.states[fst_Triphone.states[*it_closure_state_id].arcs[0].nextstate].arcs[0].ilabel);
+						
+						newarc = Arc(
+							triphoneFST->_isymbol.AddSymbol(triphone_symbol_eps),
+							lbl_next,
+							it_state.arcs[0].olabel,
+							fst_Triphone.states[*it_closure_state_id].arcs[0].nextstate
+							);
+
+						fst_Triphone.AddArc(newState,newarc);
+
 					}
 
 				}
+
+// 				Arc_Pos it_arc_pos(s, a);
+// 				while (lbl_next == 0)
+// 				{
+// 					it_arc_pos = Arc_Pos(fst_Triphone.findArc(it_arc_pos).nextstate, 0); //iterate to next arc.
+// 					lbl_next = monoiLabel[it_arc_pos];
+// 					if (fst_Triphone.states[fst_Triphone.findArc(it_arc_pos).nextstate].arcs.size() == 0)
+// 					{
+// 						lbl_next = 0;
+// 						break;
+// 					}
+// 
+// 				}
 			}
 			else
 			{
 				lbl_next = 0;
 			}
-			if (lbl_curr == 0)
-			{
-				continue;
-			}
-			Symbol triphone_symbol = triphoneFST->_isymbol.Find(lbl_curr);
+
+
+
+
+
+
+
+			Symbol triphone_symbol = triphoneFST->_isymbol.Find(lbl_curr);//relabeling phone->triphone
 			if (lbl_prev != 0)
 			{
 				triphone_symbol = triphoneFST->_isymbol.Find(lbl_prev) + '-' + triphone_symbol;
@@ -397,6 +454,7 @@ bool Sent2Fst::LoadTiedList(const char * filename)
 		}
 		mapTiedList[parts[0]] = parts[1];
 	}
+	return EXIT_SUCCESS;
 }
 
 // void Sent2Fst::Arc2LexFst(Symbol oWord, int iState, vvstr lexs, int oState, WFST * wfst)
