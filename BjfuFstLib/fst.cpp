@@ -222,10 +222,10 @@ namespace bjfufst{
 		StateId src_state_id = 0;
 		for (int s = 0; s < states.size(); s++)//(auto & state_it : states)
 		{
-			State & state_it = states[s];
+			State state_it = states[s];
 			for (int a = 0; a < state_it.arcs.size(); a++)//(auto & arc_it : state_it.arcs)
 			{
-				Arc & arc_it = state_it.arcs[a];
+				Arc arc_it = state_it.arcs[a];
 				// ofile << src_state_id << '\t' << arc_it.nextstate << '\t' << isymbs.Find(arc_it.ilabel) << '\t' << osymbs.Find(arc_it.olabel) << '\t' << arc_it.weight << '\n';
 				if (print_symbols)
 				{

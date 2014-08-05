@@ -37,3 +37,32 @@ bool isNum(std::string str)
 {
 	return (atoi(str.c_str()) == 0 && !(str.size() == 1 && str[0] == '0'));
 }
+
+char * intoa(int value, char *string, int radix)
+{
+	if (radix != 10){
+		printf("radix wrong in intoa!\n");
+		return NULL;
+	}
+	int a, b, c, d;
+	a = value / 1000;
+	b = (value % 1000) / 100;
+	c = (value % 100) / 10;
+	d = value % 10;
+	char *str = new char[10];
+	int pos = 0;
+	if (a > 0)
+		str[pos++] = a + '0';
+	if (b > 0 || pos > 0)
+		str[pos++] = b + '0';
+	if (c > 0 || pos > 0)
+		str[pos++] = c + '0';
+	if (d > 0 || pos > 0)
+		str[pos++] = d + '0';
+	if (pos == 0)
+		str[pos++] = '0';
+	str[pos] = '\0';
+	strcpy(string, str);
+	delete[] str;
+	return "ok";
+}

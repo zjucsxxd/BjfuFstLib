@@ -4,33 +4,7 @@
 
 using namespace bjfufst;
 
-char *intoa(int value, char *string ,int radix){
-	if (radix!=10){
-		printf("radix wrong in intoa!\n");
-		return NULL;
-	}
-	int a,b,c,d;
-	a = value/1000;
-	b = (value%1000)/100;
-	c = (value%100)/10;
-	d = value%10;
-	char *str = new char[10];
-	int pos = 0;
-	if (a>0)
-		str[pos++] = a + '0';
-	if (b>0 || pos>0)
-		str[pos++] = b + '0';
-	if (c>0 || pos>0)
-		str[pos++] = c + '0';
-	if (d>0 || pos>0)
-		str[pos++] = d + '0';
-	if (pos==0)
-		str[pos++] = '0';
-	str[pos] = '\0';
-	strcpy(string ,str);
-	delete [] str;
-	return "ok";
-}
+
 
 int main(const int argc, const char ** argv)
 {
@@ -50,24 +24,28 @@ int main(const int argc, const char ** argv)
 	WFST *wordFst;
 	WFST *phoneFst;
 	WFST *triphoneFst;//FST网络类
-	sent2fst.LoadLexDic("dict");//载入lex词典
+// 	sent2fst.LoadLexDic("dict");//载入lex词典
+ 	sent2fst.LoadLexDic("lexdic.txt");//载入lex词典
 	sent2fst.LoadTiedList("tiedlist");
 
-	std::string sent("<s> hello world </s>");
+	std::string sent("<s> and what would you expect them to do with it </s>");
+// 	std::string sent("<s> C B </s>");
 	std::string wordfst_name("TESTEPS");
 	std::cout << wordfst_name << std::endl;
 	wordFst = new WFST(wordfst_name);
 	phoneFst = new WFST(std::string("phone") + wordfst_name);
 	triphoneFst = new WFST(std::string("triphone") + wordfst_name);
 
-	sent2fst.Sent2WordFST(sent.c_str(), wordFst/*, "linear"*/);
-	wordFst->Draw(wordfst_name.c_str());
+// 	sent2fst.Sent2WordFST(sent.c_str(), wordFst, "linear");
+	sent2fst.Sent2WordFST(sent.c_str(), wordFst);
+	wordFst->Draw("wordfst.dot");
 	sent2fst.WordFST2PhoneFST(wordFst, phoneFst);
 	delete wordFst;
+	phoneFst->Draw("phonefst.dot");
 	sent2fst.PhoneFST2TriphoneFST(phoneFst, triphoneFst);
 	delete phoneFst;
 	// 		wordFst->SaveFST(wordfst_name);
-	wordFst->Draw("wordFst.dot");//画成dot图形文件，可以用graphviz或者xdot打开查看。
+// 	wordFst->Draw("wordFst.dot");//画成dot图形文件，可以用graphviz或者xdot打开查看。
 	triphoneFst->SaveCFastLM(wordfst_name.c_str());
 	triphoneFst->Draw("triPhoneFst.dot");
 	delete triphoneFst;

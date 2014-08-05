@@ -24,3 +24,5 @@ void split(std::string line, std::vector<std::string> &parts, std::string patter
 //integer checker
 bool isNum(std::string str);
 
+//int to ascii converter
+char *intoa(int value, char *string, int radix);

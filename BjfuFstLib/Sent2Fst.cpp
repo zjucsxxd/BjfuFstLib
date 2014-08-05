@@ -39,7 +39,7 @@ bool Sent2Fst::Sent2WordFST(const char * sent, WFST * wfst, const char * options
 			wordFst.AddArc(eps_state_id, temp2);	//and forwarding arc from eps state.
 			}
 
-		Arc temp3(iSymbol.AddSymbol("<eps>"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, next_state_id);
+		Arc temp3(iSymbol.AddSymbol("sil"), oSymbol.AddSymbol("<eps>"), g_BackoffArcWeight, next_state_id);
 		wordFst.AddArc(next_state_id, temp3);	//and self-ring arc.
 
 		prev_state_id = next_state_id;
@@ -90,14 +90,16 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 		{
 			Arc & arc = wfst.states[i].arcs[j];
 			Label ilbl = arc.ilabel;
+			Label olbl = arc.olabel;
 			Symbol oWord = wordFST->_osymbol.Find(ilbl);
+
 			if (oWord == "<eps>" || oWord == "eps")
 			{
 				//				wfst.DeleteArcs(i, 1);
 				continue;
 				//				arc.nextstate = wfst.AddArc();
 			}
-			if (oWord != "")//if arc not replaced yet 
+			if (oWord != "" && ilbl==olbl)//if arc not replaced yet and the arc is an acceptor arc 
 			{
 				//TODO:remove old arc 
 				//do the replacement.
@@ -112,7 +114,7 @@ bool Sent2Fst::WordFST2PhoneFST(const WFST * wordFST, WFST * phoneFST)
 			}
 			else
 			{
-				nArc++;
+// 				nArc++;// TODO:?
 			}
 		}
 	}
